@@ -467,7 +467,7 @@ see the notes after the table):
 | Quiz | `rag/quiz.py` (generation, checks, grading) and `server/quiz.py` (routes) | Implemented: see the Quiz section. Questions come from `rag.chunks`; with Gemini or Claude, the session's generator writes them through the same provider call settings. |
 | Notes | `rag/notes.py` (a model's notes, or offline ones quoting the document) and `server/documents.py` (route) | Implemented: see `GET /sessions/{id}/notes`. |
 | Memory cards | `rag/cards.py` (a model's cards, or offline ones, reusing `rag/quiz.py`'s checks) and `server/cards.py` (routes) | Implemented: see the Memory cards section. |
-| Codebase overview | Not implemented | A new generation step, still citing excerpts. Codebase understanding is the deferred Version 4 in the root `CLAUDE.md`. Until then, report it as `unavailable`. |
+| Codebase overview | Not implemented | A new generation step, still citing excerpts. Codebase understanding isn't built yet. Until then, report it as `unavailable`. |
 | Capabilities | `pick_generator` decides the provider at startup | Report the chosen engine and limits. |
 
 Implementation notes:

@@ -18,7 +18,7 @@ mutations = [
   ("http marks live as demo", "src/services/httpService.ts", "      demo: false,\n      sectionCount", "      demo: true,\n      sectionCount"),
   ("svg robot animates under reduced motion", "src/components/robot/RobotMascot.tsx", "animated={!reducedMotion}", "animated={true}"),
   ("empty question sent", "src/screens/workspace/AskView.tsx", "    if (!question) {", "    if (false) {"),
-  # Codex frontend review, 2026-11-07 19:30: findings 1-4.
+  # Regressions found in review.
   ("selection accepted on any screen", "src/app/state.ts", "return state.screen === 'select' && state.activity !== null && sourceKindFor(state.activity) === kind;", "return state.activity !== null && sourceKindFor(state.activity) === kind;"),
   ("selection of wrong kind accepted", "src/app/state.ts", "return state.screen === 'select' && state.activity !== null && sourceKindFor(state.activity) === kind;", "return state.screen === 'select';"),
   ("stale folder drop applied", "src/screens/select/FolderPicker.tsx", "        if (!current()) return;\n", ""),

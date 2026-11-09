@@ -12,7 +12,7 @@ HAS_ANTHROPIC = importlib.util.find_spec("anthropic") is not None
 
 
 def index() -> BM25Retriever:
-    """Eight sections: the launch code first, the quota last, orchards between (from Codex's review)."""
+    """Eight sections: the launch code first, the quota last, orchards between."""
     texts = ["The launch code is cedar."] + [f"Orchard {n} grows fruit near the river." for n in range(6)]
     texts.append("The daily quota is seven requests.")
     return BM25Retriever([Chunk(i, text) for i, text in enumerate(texts)])
@@ -44,7 +44,7 @@ FIRST = ("The launch code is cedar [1]. The rest wasn't in the information I was
 
 class KeepingTheFirstAnswer(unittest.TestCase):
     def test_a_fact_the_second_reply_drops_is_kept_with_its_source(self):
-        # Codex's case: the second reply forgets the launch code that the first one found.
+        # The second reply forgets the launch code that the first one found.
         generator, answer = ask([FIRST, "The daily quota is seven requests [1]. The rest wasn't in the "
                                         "information I was given, and I don't know the launch code."])
         self.assertIn("seven", answer)

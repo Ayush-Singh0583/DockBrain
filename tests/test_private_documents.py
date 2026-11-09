@@ -49,7 +49,7 @@ class PublicQuestions(unittest.TestCase):
 
     def test_a_public_copy_only_asks_about_public_documents(self):
         q = self.questions
-        public = {q.APPLE, q.IDS, q.CODEX, q.S}
+        public = {q.APPLE, q.IDS, q.APPLE_NOTE, q.S}
         for name in ("TUNING", "FRESH", "OLD"):
             self.assertLessEqual({entry[0] for entry in getattr(q, name)}, public, name)
 

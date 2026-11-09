@@ -14,7 +14,7 @@ and 16 FRESH with it, 14, 14 and 10 without.
 """
 DATA = "evals/data"
 APPLE = f"{DATA}/apple-wikipedia.pdf"
-IDS, CODEX = "evals/ml-ids-sample.txt", "evals/codex-apples.txt"
+IDS, APPLE_NOTE = "evals/ml-ids-sample.txt", "evals/apple-note.txt"
 S = "sample.txt"
 NOISE = ["thank", "grateful", "certify", "affirm", "violation", "submitted", "chapter 5", "chapter 2"]
 TUNING = [
@@ -31,7 +31,7 @@ TUNING = [
  (IDS, 'What algorithm classifies the traffic?', 'random forest'),
  (IDS, 'How accurate is the model?', '97 percent'),
  (IDS, 'Where do the warnings get saved?', 'log file'),
- (CODEX, 'Who produces the most?', 'China accounts'),
+ (APPLE_NOTE, 'Who produces the most?', 'China accounts'),
 ]
 
 FRESH = [
@@ -44,7 +44,7 @@ FRESH = [
  (IDS, 'Which data was the model trained on?', 'CICIDS2017'),
  (IDS, 'Who looks at the warnings?', 'Administrators'),
  (IDS, 'What kinds of attacks get caught?', 'port scans'),
- (CODEX, 'Which nation leads production?', 'China accounts'),
+ (APPLE_NOTE, 'Which nation leads production?', 'China accounts'),
 ]
 
 OLD = [  # (file, question, required groups, banned)

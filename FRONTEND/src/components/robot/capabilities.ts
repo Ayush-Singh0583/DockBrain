@@ -44,7 +44,7 @@ import dockbrainRobotUrl from '../../../../GLB/dockbrain-companion.glb?url';
 /**
  * The robot model to load: unset or empty means the DockBrain robot from GLB/, "none"
  * means the built-in robot made from simple shapes, and anything else is a model URL
- * (see HANDOFF.md, "Replacing the robot with a GLB").
+ * (see public/models/README.md).
  */
 export function resolveRobotGlbUrl(setting: string | undefined, dockbrainRobot: string): string {
   const value = setting?.trim() ?? '';

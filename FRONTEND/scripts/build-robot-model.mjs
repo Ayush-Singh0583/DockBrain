@@ -7,7 +7,7 @@
  * elliptical head without ears; a dark oval face screen with glowing cyan eyes and edge
  * arcs; a big, plain white, floating round body whose radius is the screen's width, with a
  * chest light; and detached egg-shaped hands. Part names are the ones the app's poses move
- * (HANDOFF.md, "Replacing the robot with a GLB"): Torso, ArmL, ArmR (pivot at the
+ * (public/models/README.md): Torso, ArmL, ArmR (pivot at the
  * shoulder), Head (pivot at the neck), Eyes, EyeL, EyeR, HappyEyeL, HappyEyeR, FaceScreen
  * and ChestGlow. The app adds the mouth, eye shines and cheeks when it loads the model
  * (src/components/robot/robot3d/face.ts).

@@ -13,8 +13,7 @@ in the top bar overrides it; the choice is kept in this browser.
 screen says so. Choosing files and folders, and checking their type, size and contents
 list, is real and happens on your device. Nothing is uploaded or read in demo mode. To use
 real documents, start the backend and set `VITE_DOCKBRAIN_API_URL`, as the
-[README at the repository root](../README.md) explains. See `HANDOFF.md` for exactly what
-is real and what is sample content.
+[README at the repository root](../README.md) explains.
 
 ## Requirements
 
@@ -106,5 +105,5 @@ scripts/        screenshots.mjs (browser walkthrough)
 screenshots/    Saved screenshots of every screen (screenshots/dark/ for the dark theme)
 ```
 
-Related documents: `API_CONTRACT.md` (proposed backend API), `HANDOFF.md` (status,
-checks, known gaps, robot replacement).
+Related documents: `API_CONTRACT.md` (the HTTP API) and `public/models/README.md` (using
+another robot model).

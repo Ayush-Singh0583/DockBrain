@@ -7,9 +7,3 @@ evals/data/
 # Private reports, and the evaluation questions written about them. Never publish these.
 docs/
 evals/private_questions.py
-
-# Local working notes
-CLAUDE.md
-FRONTEND/HANDOFF.md
-reviews/
-FRONTEND/review/

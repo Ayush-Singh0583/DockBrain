@@ -230,7 +230,7 @@ class GeminiTestCase(unittest.TestCase):
         self.assertEqual(answer, "It wasn't in the information I was given, but Paris.")
 
     def test_a_question_never_makes_more_than_three_http_attempts(self):
-        # Codex's case: overloads in both rounds used to allow six attempts.
+        # Overloads in both rounds used to allow six attempts.
         self.replies = [(503, LIVE_OVERLOAD), (503, LIVE_OVERLOAD),
                         says("It wasn't in the information I was given, but China.\nSEARCH TERMS: cherries"),
                         (503, LIVE_OVERLOAD), says("Never sent [1].")]

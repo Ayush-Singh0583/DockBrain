@@ -1,6 +1,6 @@
 /**
  * Loads a robot model (GLB/GLTF) and maps it onto the same `Rig` the procedural robot
- * uses. See HANDOFF.md, "Replacing the robot with a GLB".
+ * uses. See public/models/README.md.
  *
  * Node names are matched case-insensitively, ignoring "_", "-", "." and spaces:
  *   Head, ArmL, ArmR, Torso (or Body), Eyes, EyeL, EyeR, HappyEyeL, HappyEyeR,

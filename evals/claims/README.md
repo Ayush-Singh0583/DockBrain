@@ -48,8 +48,7 @@ both commands.
 - The set is frozen, so a change to the checks is compared on the same items.
 - Don't change the items or labels to improve a score. If a label is wrong, correct it and
   say so where the score is reported.
-- The person labelling shouldn't be the author of the checks. An AI session must never write
-  `labels.json`.
+- The person labelling shouldn't be the author of the checks.
 - `score` runs whatever the checks are at that moment, so run it before and after any change.
 
 ## Sources

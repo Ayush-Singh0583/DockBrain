@@ -214,8 +214,7 @@ class ReadingRealPageLayouts(PdfTestCase):
 
 @needs_pypdf
 class KeepingSourceContent(PdfTestCase):
-    """The loader must not delete or alter text it isn't sure about. The first four
-    come from Codex's review."""
+    """The loader must not delete or alter text it isn't sure about."""
 
     def flat(self, pages) -> str:
         return " ".join(load_document(str(self.write_pdf(pages))).split())
@@ -296,7 +295,7 @@ class KeepingSourceContent(PdfTestCase):
         self.assertIn("The total harvested was 1250", self.flat(pages))
 
     def test_changing_totals_at_the_top_of_each_page_are_kept(self):
-        # From Codex's 2026-11-07 review: these differ in the number only, but don't track the pages.
+        # These differ in the number only, but don't track the pages.
         pages = [[f"The total harvested was {n}", f"Orchard {label} produced apples.", "The harvest was inspected."]
                  for n, label in zip((100, 200, 300), ("Alpha", "Beta", "Gamma"))]
         text = self.flat(pages)
@@ -304,7 +303,7 @@ class KeepingSourceContent(PdfTestCase):
             self.assertIn(f"The total harvested was {total}", text)
 
     def test_sequential_quantities_finishing_a_sentence_are_kept(self):
-        # From Codex's 2026-11-07 review: 100, 101, 102 advance with the pages like page numbers.
+        # 100, 101, 102 advance with the pages like page numbers.
         pages = [[f"Orchard {label} harvest.", "The count was", str(n)] for n, label in zip((100, 101, 102), ("Alpha", "Beta", "Gamma"))]
         text = self.flat(pages)
         for count in ("was 100", "was 101", "was 102"):
