@@ -1,0 +1,29 @@
+{
+ "Printing_press-note-23": {"type": "opposite", "changes": {"text": "Cities with presses before 1500 were less likely to adopt Protestantism by 1530."}},
+ "Transmission_Control_Protocol-note-22": {"type": "negation", "changes": {"text": "Retransmission ambiguity cannot cause spurious fast retransmissions, even if there is reordering beyond the duplicate acknowledgment threshold."}},
+ "ml-ids-sample-note-11": {"type": "negation", "changes": {"text": "The system does not currently detect denial of service attacks."}},
+ "sample-note-3": {"type": "number", "changes": {"text": "There are nine planets. The four inner planets, Mercury, Venus, Earth and Mars, are terrestrial planets made of rock and metal."}},
+ "Apple-note-15": {"type": "opposite", "changes": {"text": "Dwarf rootstocks produce small trees that bear fruit many years later than full-size trees."}},
+ "Photosynthesis-note-27": {"type": "negation", "changes": {"text": "Melvin Calvin never won a Nobel Prize for sorting out carbon metabolism using carbon-14 isotopes."}},
+ "Printing_press-note-11": {"type": "number", "changes": {"text": "The first Arabic-script press was established by İbrahim Müteferrika in 1827."}},
+ "Transmission_Control_Protocol-note-24": {"type": "wrong_detail", "changes": {"text": "Accurate RTT estimates are important for loss recovery, allowing a receiver to assume an unacknowledged packet is lost."}},
+ "ml-ids-sample-note-10": {"type": "wrong_detail", "changes": {"text": "The current version detects denial of service attacks, port scans, and phishing emails."}},
+ "sample-note-7": {"type": "swapped_name", "changes": {"text": "Venus is called the Red Planet because iron oxide on its surface gives it a reddish appearance."}},
+
+ "Apple-card-3": {"type": "opposite", "changes": {"answer": "Their edges stay apart from each other"}},
+ "Photosynthesis-card-6": {"type": "wrong_detail", "changes": {"answer": "The stroma of the chloroplast"}},
+ "Printing_press-card-6": {"type": "negation", "changes": {"answer": "Because the equipment was not portable"}},
+ "Transmission_Control_Protocol-card-8": {"type": "wrong_detail", "changes": {"answer": "By using a fixed window flow control protocol."}},
+ "ml-ids-sample-card-6": {"type": "number", "changes": {"answer": "79 percent"}},
+ "sample-card-11": {"type": "wrong_detail", "changes": {"answer": "Iron oxide in its atmosphere gives it a reddish appearance"}},
+ "Apple-card-1": {"type": "swapped_name", "changes": {"answer": "Malus sieversii"}},
+ "Photosynthesis-card-10": {"type": "swapped_name", "changes": {"answer": "Oxygen and sulfur"}},
+
+ "Transmission_Control_Protocol-quiz-3": {"type": "wrong_key", "changes": {"answer": 0}},
+ "ml-ids-sample-quiz-3": {"type": "wrong_key", "changes": {"answer": 1}},
+ "sample-quiz-7": {"type": "wrong_key", "changes": {"answer": 3}},
+ "Photosynthesis-quiz-4": {"type": "opposite", "changes": {"options": ["The conversion of CO2 to oxalate under stress conditions", "The splitting of water molecules", "The fixation of carbon dioxide in C4 plants", "The storage of energy in cellulose"]}},
+ "Printing_press-quiz-4": {"type": "number", "changes": {"options": ["1493", "1567", "1577", "1627"]}},
+ "Transmission_Control_Protocol-quiz-6": {"type": "swapped_name", "changes": {"options": ["Cortana", "WhatsApp", "Skype", "Zoom"]}},
+ "ml-ids-sample-quiz-5": {"type": "wrong_detail", "changes": {"options": ["Source address, destination address, and packet size", "Timestamp, packet size, and protocol version", "User ID, session ID, and error code", "IP subnet, MAC address, and device type"]}}
+}

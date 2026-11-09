@@ -1,0 +1,1049 @@
+{
+ "model": "qwen3.5:9b",
+ "items": [
+  {
+   "id": "c01",
+   "document": "Photosynthesis",
+   "kind": "card",
+   "passage": "While able to perform photosynthesis, many of these eukaryotic groups are mixotrophs and practice heterotrophy to various degrees. Photosynthetic prokaryotic lineages Early photosynthetic systems, such as those in green and purple sulfur and green and purple nonsulfur bacteria, are thought to have been anoxygenic, and used various other molecules than water as electron donors. Green and purple sulfur bacteria are thought to have used hydrogen and sulfur as electron donors. Green nonsulfur bacteria used various amino and other organic acids as electron donors. Purple nonsulfur bacteria used a variety of nonspecific organic molecules. The use of these molecules is consistent with the geological evidence that Earth's early atmosphere was highly reducing at that time.",
+   "quote": "Green and purple sulfur bacteria are thought to have used hydrogen and sulfur as electron donors.",
+   "claim": {
+    "question": "What molecules did green and purple sulfur bacteria use as electron donors?",
+    "answer": "Oxygen and sulfur"
+   },
+   "original": {
+    "question": "What molecules did green and purple sulfur bacteria use as electron donors?",
+    "answer": "Hydrogen and sulfur"
+   },
+   "origin": "altered",
+   "alteration": "swapped_name",
+   "from": "Photosynthesis-card-10"
+  },
+  {
+   "id": "c02",
+   "document": "Apple",
+   "kind": "quiz",
+   "passage": "The larynx in the human throat has been called the \"Adam's apple\" because of a notion that it was caused by the forbidden fruit remaining in the throat of Adam. The apple as symbol of sexual seduction has been used to imply human sexuality, possibly in an ironic vein.[124] The proverb, \"An apple a day keeps the doctor away\", addressing the supposed health benefits of the fruit, has been traced to 19th-century Wales, where the original phrase was \"Eat an apple on going to bed, and you'll keep the doctor from earning his bread\".[128] In the 19th century and early 20th, the phrase evolved to \"an apple a day, no doctor to pay\" and \"an apple a day sends the doctor away\"; the phrasing now commonly used was first recorded in 1922.[129]",
+   "quote": "The proverb, 'An apple a day keeps the doctor away', addressing the supposed health benefits of the fruit, has been traced to 19th-century Wales, where the original phrase was 'Eat an apple on going to bed, and you'll keep the doctor from earning his bread'.",
+   "claim": {
+    "question": "Where was the original phrase 'Eat an apple on going to bed, and you'll keep the doctor from earning his bread' traced to?",
+    "options": [
+     "19th-century Wales",
+     "Ancient Greece",
+     "Northern Europe",
+     "The Near East"
+    ],
+    "answer": 0
+   },
+   "origin": "model",
+   "alteration": null,
+   "from": "Apple-quiz-8"
+  },
+  {
+   "id": "c03",
+   "document": "ml-ids-sample",
+   "kind": "note",
+   "passage": "Machine Learning Based Intrusion Detection System This project builds an intrusion detection system that classifies network traffic as normal or malicious. It replaces fixed signature rules with a trained model, so it can flag attacks that no existing rule describes. The system captures packets, groups them into flows, and extracts features such as flow duration, packet counts, and byte rates. A random forest classifier was trained on the CICIDS2017 dataset and reached 97 percent accuracy on held-out traffic. When the model flags a flow, the system writes an alert to a log file with the source address, the destination address, and the predicted attack type. Administrators review these alerts on a simple dashboard.",
+   "quote": "A random forest classifier was trained on the CICIDS2017 dataset and reached 97 percent accuracy on held-out traffic.",
+   "claim": {
+    "text": "The model reached 97 percent accuracy on held-out traffic."
+   },
+   "origin": "model",
+   "alteration": null,
+   "from": "ml-ids-sample-note-6"
+  },
+  {
+   "id": "c04",
+   "document": "Apple",
+   "kind": "quiz",
+   "passage": "The East Malling Research Station conducted extensive research into rootstocks, and their rootstocks are given an \"M\" prefix to designate their origin. Rootstocks marked with an \"MM\" prefix are Malling-series cultivars later crossed with trees of 'Northern Spy' in Merton, England.[49] Most new apple cultivars originate as seedlings, which either arise by chance or are bred by deliberately crossing cultivars with promising characteristics.[50] The words \"seedling\", \"pippin\", and \"kernel\" in the name of an apple cultivar suggest that it originated as a seedling. Apples can also form bud sports (mutations on a single branch). Some bud sports turn out to be improved strains of the parent cultivar.",
+   "quote": "The words 'seedling', 'pippin', and 'kernel' in the name of an apple cultivar suggest that it originated as a seedling.",
+   "claim": {
+    "question": "What do the words 'seedling', 'pippin', and 'kernel' in an apple cultivar's name suggest?",
+    "options": [
+     "that it originated as a seedling",
+     "that it is a bud sport",
+     "that it was crossed with Northern Spy",
+     "that it is a hybrid of M. baccata"
+    ],
+    "answer": 0
+   },
+   "origin": "model",
+   "alteration": null,
+   "from": "Apple-quiz-4"
+  },
+  {
+   "id": "c05",
+   "document": "Printing_press",
+   "kind": "card",
+   "passage": "The historians Lucien Febvre and Henri-Jean Martin conclude that by this date, the printed book was used throughout Europe. In Italy, a center of early printing, print shops existed in 77 cities and towns by 1500, while 151 locations in Italy had hosted printing at some point by 1600. In 1600, nearly 3,000 printers are known to have been active in Italy. However, printing centers soon emerged, and one third of the Italian printers published in Venice. By 1500, printing presses throughout Western Europe had produced over 20 million copies. Their output grew to an estimated 150–200 million copies by 1600. European printing presses c. 1600 could produce between 1,500 and 3,600 impressions per workday.",
+   "quote": "Their output grew to an estimated 150–200 million copies by 1600",
+   "claim": {
+    "question": "How many copies had European printing presses produced by 1600?",
+    "answer": "An estimated 150–200 million"
+   },
+   "origin": "model",
+   "alteration": null,
+   "from": "Printing_press-card-5"
+  },
+  {
+   "id": "c06",
+   "document": "ml-ids-sample",
+   "kind": "card",
+   "passage": "Machine Learning Based Intrusion Detection System This project builds an intrusion detection system that classifies network traffic as normal or malicious. It replaces fixed signature rules with a trained model, so it can flag attacks that no existing rule describes. The system captures packets, groups them into flows, and extracts features such as flow duration, packet counts, and byte rates. A random forest classifier was trained on the CICIDS2017 dataset and reached 97 percent accuracy on held-out traffic. When the model flags a flow, the system writes an alert to a log file with the source address, the destination address, and the predicted attack type. Administrators review these alerts on a simple dashboard.",
+   "quote": "so it can flag attacks that no existing rule describes",
+   "claim": {
+    "question": "What capability is gained by replacing fixed signature rules with a trained model?",
+    "answer": "Flagging attacks no existing rule describes"
+   },
+   "origin": "model",
+   "alteration": null,
+   "from": "ml-ids-sample-card-3"
+  },
+  {
+   "id": "c07",
+   "document": "Photosynthesis",
+   "kind": "quiz",
+   "passage": "Salvaging glycolate is an energetically expensive process that uses the glycolate pathway, and only 75% of the carbon is returned to the Calvin-Benson cycle as 3-phosphoglycerate. The reactions also produce ammonia (NH3), which is able to diffuse out of the plant, leading to a loss of nitrogen. A highly simplified summary is: 2 glycolate + ATP → 3-phosphoglycerate + carbon dioxide + ADP + NH3 The salvaging pathway for the products of RuBisCO oxygenase activity is more commonly known as photorespiration, since it is characterized by light-dependent oxygen consumption and the release of carbon dioxide.",
+   "quote": "...and only 75% of the carbon is returned to the Calvin-Benson cycle as 3-phosphoglycerate.",
+   "claim": {
+    "question": "What percentage of carbon is returned to the Calvin-Benson cycle during the salvaging pathway for glycolate?",
+    "options": [
+     "75%",
+     "90%",
+     "50%",
+     "25%"
+    ],
+    "answer": 0
+   },
+   "origin": "model",
+   "alteration": null,
+   "from": "Photosynthesis-quiz-8"
+  },
+  {
+   "id": "c08",
+   "document": "Apple",
+   "kind": "note",
+   "passage": "Apple 'Cripps Pink' cultivar Flowers of M. domestica Scientific classification Kingdom: Plantae Clade: Tracheophytes Clade: Angiosperms Clade: Eudicots Clade: Rosids Order: Rosales Family: Rosaceae Genus: Malus Species: M. domestica Binomial name Malus domestica (Suckow) Borkh., 1803[1] Synonyms[2][3] M. communis Desf., 1768 M. pumila Mil. M. frutescens Medik. M. paradisiaca (L.) Medikus M. sylvestris Mil. Pyrus malus L. Apple An apple is the round, edible fruit of an apple tree (Malus spp.). Fruit trees of the orchard or domestic apple (Malus domestica), the most widely grown in the genus, are cultivated worldwide. The tree originated in Central Asia, where its wild ancestor, Malus sieversii, is still found.",
+   "quote": "Kingdom: Plantae ... Family: Rosaceae",
+   "claim": {
+    "text": "The apple belongs to the Kingdom Plantae and the Family Rosaceae."
+   },
+   "origin": "model",
+   "alteration": null,
+   "from": "Apple-note-1"
+  },
+  {
+   "id": "c09",
+   "document": "ml-ids-sample",
+   "kind": "note",
+   "passage": "Administrators review these alerts on a simple dashboard. The current version detects denial of service attacks, port scans, and brute force login attempts.",
+   "quote": "The current version detects denial of service attacks, port scans, and brute force login attempts.",
+   "claim": {
+    "text": "The current version detects denial of service attacks, port scans, and phishing emails."
+   },
+   "original": {
+    "text": "The current version detects denial of service attacks, port scans, and brute force login attempts."
+   },
+   "origin": "altered",
+   "alteration": "wrong_detail",
+   "from": "ml-ids-sample-note-10"
+  },
+  {
+   "id": "c10",
+   "document": "Apple",
+   "kind": "note",
+   "passage": "The rootstock used for the bottom of the graft can be selected to produce trees of a large variety of sizes, as well as changing the winter hardiness, insect and disease resistance, and soil preference of the resulting tree. Dwarf rootstocks can be used to produce very small trees (less than 3.0 m or 10 ft high at maturity), which bear fruit many years earlier in their life cycle than full size trees, and are easier to harvest.[47] Dwarf rootstocks for apple trees can be traced as far back as 300 BCE, to the area of Persia and Asia Minor. Alexander the Great sent samples of dwarf apple trees to Aristotle's Lyceum.",
+   "quote": "Dwarf rootstocks can be used to produce very small trees... which bear fruit many years earlier in their life cycle...",
+   "claim": {
+    "text": "Dwarf rootstocks produce small trees that bear fruit many years later than full-size trees."
+   },
+   "original": {
+    "text": "Dwarf rootstocks produce small trees that bear fruit many years earlier than full-size trees."
+   },
+   "origin": "altered",
+   "alteration": "opposite",
+   "from": "Apple-note-15"
+  },
+  {
+   "id": "c11",
+   "document": "Photosynthesis",
+   "kind": "quiz",
+   "passage": "This process was named alarm photosynthesis. Under stress conditions (e.g., water deficit), oxalate released from calcium oxalate crystals is converted to CO2 by an oxalate oxidase enzyme, and the produced CO2 can support the Calvin cycle reactions. Reactive hydrogen peroxide (H2O2), the byproduct of oxalate oxidase reaction, can be neutralized by catalase. Alarm photosynthesis represents a photosynthetic variant to be added to the well-known C4 and CAM pathways. However, alarm photosynthesis, in contrast to these pathways, operates as a biochemical pump that collects carbon from the organ interior (or from the soil) and not from the atmosphere. In water Cyanobacteria possess carboxysomes, which increase the concentration of CO2 around RuBisCO to increase the rate of photosynthesis.",
+   "quote": "This process was named alarm photosynthesis. Under stress conditions (e.g., water deficit), oxalate released from calcium oxalate crystals is converted to CO2 by an oxalate oxidase enzyme, and the produced CO2 can support the Calvin cycle reactions.",
+   "claim": {
+    "question": "What process was named 'alarm photosynthesis'?",
+    "options": [
+     "The conversion of CO2 to oxalate under stress conditions",
+     "The splitting of water molecules",
+     "The fixation of carbon dioxide in C4 plants",
+     "The storage of energy in cellulose"
+    ],
+    "answer": 0
+   },
+   "original": {
+    "question": "What process was named 'alarm photosynthesis'?",
+    "options": [
+     "The conversion of oxalate to CO2 under stress conditions",
+     "The splitting of water molecules",
+     "The fixation of carbon dioxide in C4 plants",
+     "The storage of energy in cellulose"
+    ],
+    "answer": 0
+   },
+   "origin": "altered",
+   "alteration": "opposite",
+   "from": "Photosynthesis-quiz-4"
+  },
+  {
+   "id": "c12",
+   "document": "Transmission_Control_Protocol",
+   "kind": "card",
+   "passage": "Therefore, it is not particularly suitable for real-time applications such as voice over IP. For such applications, protocols like the Real-time Transport Protocol (RTP) operating over the User Datagram Protocol (UDP) are usually recommended instead. TCP is a reliable byte stream delivery service that guarantees that all bytes received will be identical and in the same order as those sent. Since packet transfer by many networks is not reliable, TCP achieves this using a technique known as positive acknowledgment with re-transmission. This requires the receiver to respond with an acknowledgement message as it receives the data. The sender keeps a record of each packet it sends and maintains a timer from when the packet was sent.",
+   "quote": "TCP achieves this using a technique known as positive acknowledgment with re-transmission.",
+   "claim": {
+    "question": "How does TCP achieve reliable delivery despite unreliable packet transfer?",
+    "answer": "Using positive acknowledgment with re-transmission."
+   },
+   "origin": "model",
+   "alteration": null,
+   "from": "Transmission_Control_Protocol-card-4"
+  },
+  {
+   "id": "c13",
+   "document": "Photosynthesis",
+   "kind": "quiz",
+   "passage": "Development of the concept In 1893, the American botanist Charles Reid Barnes proposed two terms, photosyntax and photosynthesis, for the biological process of synthesis of complex carbon compounds out of carbonic acid, in the presence of chlorophyll, under the influence of light. The term photosynthesis is derived from the Greek phōs (φῶς, 'gleam') and sýnthesis (σύνθεσις, 'arranging together'), while photosyntax comes from sýntaxis (σύνταξις, 'configuration'). Over time, the term photosynthesis came into common usage. Later discovery of anoxygenic photosynthetic bacteria and photophosphorylation necessitated redefinition of the term.",
+   "quote": "In 1893, the American botanist Charles Reid Barnes proposed two terms, photosyntax and photosynthesis, for the biological process of synthesis of complex carbon compounds out of carbonic acid, in the presence of chlorophyll, under the influence of light.",
+   "claim": {
+    "question": "In what year did Charles Reid Barnes propose the terms 'photosyntax' and 'photosynthesis'?",
+    "options": [
+     "1893",
+     "1905",
+     "1867",
+     "1920"
+    ],
+    "answer": 0
+   },
+   "origin": "model",
+   "alteration": null,
+   "from": "Photosynthesis-quiz-7"
+  },
+  {
+   "id": "c14",
+   "document": "Transmission_Control_Protocol",
+   "kind": "note",
+   "passage": "IEN #5 Specification of Internet Transmission Control Program TCP Version 2 (March 1977) IEN #21 Specification of Internetwork Transmission Control Program TCP Version 3 (January 1978) IEN #27 A Proposal for TCP Version 3.1 Header Format (February 1978) IEN #40 Transmission Control Protocol Draft Version 4 (June 1978) IEN #44 Latest Header Formats (June 1978) IEN #55 Specification of Internetwork Transmission Control Protocol Version 4 (September 1978) IEN #81 Transmission Control Protocol Version 4 (February 1979) IEN #112 Transmission Control Protocol (August 1979) IEN #124 DOD STANDARD TRANSMISSION CONTROL PROTOCOL (December 1979) TCP was standardized in January 1980 as RFC 761. About 315 Internet hosts advertised TCP support by 1983, with only a portion accepting connections at any given time.",
+   "quote": "TCP was standardized in January 1980 as RFC 761.",
+   "claim": {
+    "text": "TCP was standardized in January 1980 as RFC 761 after evolving through various internal network specifications."
+   },
+   "origin": "model",
+   "alteration": null,
+   "from": "Transmission_Control_Protocol-note-4"
+  },
+  {
+   "id": "c15",
+   "document": "Photosynthesis",
+   "kind": "card",
+   "passage": "More recent studies also suggest that photosynthesis may have begun about 3.4 billion years ago, though the first direct evidence of photosynthesis comes from thylakoid membranes preserved in 1.75-billion-year-old cherts. Oxygenic photosynthesis is the main source of oxygen in the Earth's atmosphere, and its earliest appearance is sometimes referred to as the oxygen catastrophe. Geological evidence suggests that oxygenic photosynthesis, such as that in cyanobacteria, became important during the Paleoproterozoic era around two billion years ago. Modern photosynthesis in plants and most photosynthetic prokaryotes is oxygenic, using water as an electron donor, which is oxidized to molecular oxygen in the photosynthetic reaction center. Symbiosis and the origin of chloroplasts Several groups of animals have formed symbiotic relationships with photosynthetic algae.",
+   "quote": "Geological evidence suggests that oxygenic photosynthesis, such as that in cyanobacteria, became important during the Paleoproterozoic era around two billion years ago.",
+   "claim": {
+    "question": "When did geological evidence suggest oxygenic photosynthesis became important?",
+    "answer": "Around two billion years ago"
+   },
+   "origin": "model",
+   "alteration": null,
+   "from": "Photosynthesis-card-9"
+  },
+  {
+   "id": "c16",
+   "document": "ml-ids-sample",
+   "kind": "quiz",
+   "passage": "Machine Learning Based Intrusion Detection System This project builds an intrusion detection system that classifies network traffic as normal or malicious. It replaces fixed signature rules with a trained model, so it can flag attacks that no existing rule describes. The system captures packets, groups them into flows, and extracts features such as flow duration, packet counts, and byte rates. A random forest classifier was trained on the CICIDS2017 dataset and reached 97 percent accuracy on held-out traffic. When the model flags a flow, the system writes an alert to a log file with the source address, the destination address, and the predicted attack type. Administrators review these alerts on a simple dashboard.",
+   "quote": "When the model flags a flow, the system writes an alert to a log file with the source address, the destination address, and the predicted attack type.",
+   "claim": {
+    "question": "What information does the system write to a log file when an alert is flagged?",
+    "options": [
+     "Source address, destination address, and packet size",
+     "Timestamp, packet size, and protocol version",
+     "User ID, session ID, and error code",
+     "IP subnet, MAC address, and device type"
+    ],
+    "answer": 0
+   },
+   "original": {
+    "question": "What information does the system write to a log file when an alert is flagged?",
+    "options": [
+     "Source address, destination address, and predicted attack type",
+     "Timestamp, packet size, and protocol version",
+     "User ID, session ID, and error code",
+     "IP subnet, MAC address, and device type"
+    ],
+    "answer": 0
+   },
+   "origin": "altered",
+   "alteration": "wrong_detail",
+   "from": "ml-ids-sample-quiz-5"
+  },
+  {
+   "id": "c17",
+   "document": "ml-ids-sample",
+   "kind": "note",
+   "passage": "Administrators review these alerts on a simple dashboard. The current version detects denial of service attacks, port scans, and brute force login attempts.",
+   "quote": "The current version detects denial of service attacks, port scans, and brute force login attempts.",
+   "claim": {
+    "text": "The system does not currently detect denial of service attacks."
+   },
+   "original": {
+    "text": "The system currently detects denial of service attacks."
+   },
+   "origin": "altered",
+   "alteration": "negation",
+   "from": "ml-ids-sample-note-11"
+  },
+  {
+   "id": "c18",
+   "document": "Photosynthesis",
+   "kind": "note",
+   "passage": "Total photosynthesis is limited by a range of environmental factors. These include the amount of light available, the amount of leaf area a plant has to capture light (shading by other plants is a major limitation of photosynthesis), the rate at which carbon dioxide can be supplied to the chloroplasts to support photosynthesis, the availability of water, and the availability of suitable temperatures for carrying out photosynthesis. Light intensity (irradiance), wavelength and temperature The process of photosynthesis provides the main input of free energy into the biosphere, and is one of four main ways in which radiation is important for plant life. The radiation climate within plant communities is extremely variable, in both time and space.",
+   "quote": "Total photosynthesis is limited by a range of environmental factors. These include the amount of light available... the availability of water, and the availability of suitable temperatures...",
+   "claim": {
+    "text": "Photosynthesis efficiency is limited by light amount, leaf area, water, and temperature."
+   },
+   "origin": "model",
+   "alteration": null,
+   "from": "Photosynthesis-note-21"
+  },
+  {
+   "id": "c19",
+   "document": "Apple",
+   "kind": "note",
+   "passage": "Arctic apples, a non-browning group of apples introduced to the United States market in 2019, have been genetically modified to silence the expression of polyphenol oxidase, thereby delaying a browning effect and improving apple eating quality.[101][102] The US Food and Drug Administration in 2015, and Canadian Food Inspection Agency in 2017, determined that Arctic apples are as safe and nutritious as conventional apples.[103][104] Apple seed oil is obtained by pressing apple seeds for manufacturing cosmetics.[105] Organic production Non-browning apples Other products In culture Brita as Iduna (1901) by Carl Larsson",
+   "quote": "Arctic apples... have been genetically modified to silence the expression of polyphenol oxidase, thereby delaying a browning effect...",
+   "claim": {
+    "text": "Arctic apples are genetically modified to silence polyphenol oxidase, delaying browning."
+   },
+   "origin": "model",
+   "alteration": null,
+   "from": "Apple-note-24"
+  },
+  {
+   "id": "c20",
+   "document": "Transmission_Control_Protocol",
+   "kind": "quiz",
+   "passage": "When the persist timer expires, the TCP sender attempts recovery by sending a small packet so that the receiver responds by sending another acknowledgment containing the new window size. If a receiver is processing incoming data in small increments, it may repeatedly advertise a small receive window. This is referred to as the silly window syndrome, since it is inefficient to send only a few bytes of data in a TCP segment, given the relatively large overhead of the TCP header. Congestion control The final main aspect of TCP is congestion control. TCP uses a number of mechanisms to achieve high performance and avoid congestive collapse, a gridlock situation where network performance is severely degraded.",
+   "quote": "TCP uses a number of mechanisms to achieve high performance and avoid congestive collapse, a gridlock situation where network performance is severely degraded.",
+   "claim": {
+    "question": "What is the term for the situation where network performance is severely degraded due to congestion?",
+    "options": [
+     "Buffer overflow",
+     "Congestive collapse",
+     "Packet loss",
+     "Window scaling"
+    ],
+    "answer": 1
+   },
+   "origin": "model",
+   "alteration": null,
+   "from": "Transmission_Control_Protocol-quiz-4"
+  },
+  {
+   "id": "c21",
+   "document": "ml-ids-sample",
+   "kind": "card",
+   "passage": "Administrators review these alerts on a simple dashboard. The current version detects denial of service attacks, port scans, and brute force login attempts.",
+   "quote": "Administrators review these alerts on a simple dashboard.",
+   "claim": {
+    "question": "On what interface do administrators review the alerts?",
+    "answer": "A simple dashboard"
+   },
+   "origin": "model",
+   "alteration": null,
+   "from": "ml-ids-sample-card-10"
+  },
+  {
+   "id": "c22",
+   "document": "Photosynthesis",
+   "kind": "note",
+   "passage": "Although all cells in the green parts of a plant have chloroplasts, the majority of those are found in specially adapted structures called leaves. Certain species adapted to conditions of strong sunlight and aridity, such as many Euphorbia and cactus species, have their main photosynthetic organs in their stems. The cells in the interior tissues of a leaf, called the mesophyll, can contain between 450,000 and 800,000 chloroplasts for every square millimeter of leaf. The surface of the leaf is coated with a water-resistant waxy cuticle that protects the leaf from excessive evaporation of water and decreases the absorption of ultraviolet or blue light to minimize heating.",
+   "quote": "Although all cells in the green parts of a plant have chloroplasts, the majority of those are found in specially adapted structures called leaves.",
+   "claim": {
+    "text": "Chloroplasts are found mainly in leaves, containing hundreds of thousands of chloroplasts per square millimeter."
+   },
+   "origin": "model",
+   "alteration": null,
+   "from": "Photosynthesis-note-11"
+  },
+  {
+   "id": "c23",
+   "document": "Photosynthesis",
+   "kind": "card",
+   "passage": "Photosynthetic organisms also convert around 100–115 billion tons (91–104 Pg petagrams, or billions of metric tons), of carbon into biomass per year. Photosynthesis was discovered in 1779 by Jan Ingenhousz who showed that plants need light, not just soil and water. Overview Most photosynthetic organisms are photoautotrophs, which means that they are able to synthesize food directly from carbon dioxide and water using energy from light. However, not all organisms use carbon dioxide as a source of carbon atoms to carry out photosynthesis; photoheterotrophs use organic compounds, rather than carbon dioxide, as a source of carbon. In plants, algae, and cyanobacteria, photosynthesis releases oxygen. This oxygenic photosynthesis is by far the most common type of photosynthesis used by living organisms.",
+   "quote": "Photosynthesis was discovered in 1779 by Jan Ingenhousz who showed that plants need light, not just soil and water.",
+   "claim": {
+    "question": "Who discovered photosynthesis and in what year?",
+    "answer": "Jan Ingenhousz in 1779"
+   },
+   "origin": "model",
+   "alteration": null,
+   "from": "Photosynthesis-card-4"
+  },
+  {
+   "id": "c24",
+   "document": "Transmission_Control_Protocol",
+   "kind": "note",
+   "passage": "For example, when an HTML file is sent from a web server, the TCP software layer of that server divides the file into segments and forwards them individually to the internet layer in the network stack. The internet layer software encapsulates each TCP segment into an IP packet by adding a header that includes (among other data) the destination IP address. When the client program on the destination computer receives them, the TCP software in the transport layer reassembles the segments and ensures they are correctly ordered and error-free as it streams the file contents to the receiving application.",
+   "quote": "the TCP software layer of that server divides the file into segments and forwards them individually to the internet layer in the network stack.",
+   "claim": {
+    "text": "The TCP software layer divides files into segments and forwards them individually to the internet layer."
+   },
+   "origin": "model",
+   "alteration": null,
+   "from": "Transmission_Control_Protocol-note-5"
+  },
+  {
+   "id": "c25",
+   "document": "Apple",
+   "kind": "card",
+   "passage": "Apple 'Cripps Pink' cultivar Flowers of M. domestica Scientific classification Kingdom: Plantae Clade: Tracheophytes Clade: Angiosperms Clade: Eudicots Clade: Rosids Order: Rosales Family: Rosaceae Genus: Malus Species: M. domestica Binomial name Malus domestica (Suckow) Borkh., 1803[1] Synonyms[2][3] M. communis Desf., 1768 M. pumila Mil. M. frutescens Medik. M. paradisiaca (L.) Medikus M. sylvestris Mil. Pyrus malus L. Apple An apple is the round, edible fruit of an apple tree (Malus spp.). Fruit trees of the orchard or domestic apple (Malus domestica), the most widely grown in the genus, are cultivated worldwide. The tree originated in Central Asia, where its wild ancestor, Malus sieversii, is still found.",
+   "quote": "Binomial name Malus domestica (Suckow) Borkh., 1803",
+   "claim": {
+    "question": "What is the binomial name of the domesticated apple?",
+    "answer": "Malus sieversii"
+   },
+   "original": {
+    "question": "What is the binomial name of the domesticated apple?",
+    "answer": "Malus domestica"
+   },
+   "origin": "altered",
+   "alteration": "swapped_name",
+   "from": "Apple-card-1"
+  },
+  {
+   "id": "c26",
+   "document": "Printing_press",
+   "kind": "note",
+   "passage": "In 1470, Florentine humanist Niccolò Perotti claimed that many printed books were inaccurate, while a decade later Gerolamo Squarzafico claimed that most printers were illiterate and Giorgio Merula worried that printing could harm classical scholarship. The Swiss physician Paracelsus promoted direct observation over book learning, although he made full use of print to broadcast his views. Some critics were concerned that untrained readers might develop heretical ideas as they gained access to religious texts. Language As printing spread, Latin ceased to be the dominant language of publication. Authors wrote more frequently in the vernacular language of each region, and printed texts helped to standardize the spelling and syntax of these languages, reducing their variability.",
+   "quote": "Authors wrote more frequently in the vernacular language of each region, and printed texts helped to standardize the spelling and syntax of these languages.",
+   "claim": {
+    "text": "Authors wrote more frequently in the vernacular language, helping to standardize spelling."
+   },
+   "origin": "model",
+   "alteration": null,
+   "from": "Printing_press-note-19"
+  },
+  {
+   "id": "c27",
+   "document": "ml-ids-sample",
+   "kind": "card",
+   "passage": "Machine Learning Based Intrusion Detection System This project builds an intrusion detection system that classifies network traffic as normal or malicious. It replaces fixed signature rules with a trained model, so it can flag attacks that no existing rule describes. The system captures packets, groups them into flows, and extracts features such as flow duration, packet counts, and byte rates. A random forest classifier was trained on the CICIDS2017 dataset and reached 97 percent accuracy on held-out traffic. When the model flags a flow, the system writes an alert to a log file with the source address, the destination address, and the predicted attack type. Administrators review these alerts on a simple dashboard.",
+   "quote": "and reached 97 percent accuracy on held-out traffic",
+   "claim": {
+    "question": "What accuracy did the model reach on held-out traffic?",
+    "answer": "79 percent"
+   },
+   "original": {
+    "question": "What accuracy did the model reach on held-out traffic?",
+    "answer": "97 percent"
+   },
+   "origin": "altered",
+   "alteration": "number",
+   "from": "ml-ids-sample-card-6"
+  },
+  {
+   "id": "c28",
+   "document": "sample",
+   "kind": "note",
+   "passage": "The Solar System The Solar System formed about 4.6 billion years ago from the gravitational collapse of a giant molecular cloud. Most of its mass is in the Sun, and the rest is mostly in Jupiter. There are eight planets. The four inner planets, Mercury, Venus, Earth and Mars, are terrestrial planets made of rock and metal. The four outer planets are giants: Jupiter and Saturn are gas giants, while Uranus and Neptune are ice giants. Jupiter is the largest planet. It has a mass more than twice that of all the other planets combined. Its Great Red Spot is a storm that has lasted for at least 350 years.",
+   "quote": "The four inner planets, Mercury, Venus, Earth and Mars, are terrestrial planets made of rock and metal.",
+   "claim": {
+    "text": "There are nine planets. The four inner planets, Mercury, Venus, Earth and Mars, are terrestrial planets made of rock and metal."
+   },
+   "original": {
+    "text": "There are eight planets. The four inner planets, Mercury, Venus, Earth and Mars, are terrestrial planets made of rock and metal."
+   },
+   "origin": "altered",
+   "alteration": "number",
+   "from": "sample-note-3"
+  },
+  {
+   "id": "c29",
+   "document": "Apple",
+   "kind": "note",
+   "passage": "Apple 'Cripps Pink' cultivar Flowers of M. domestica Scientific classification Kingdom: Plantae Clade: Tracheophytes Clade: Angiosperms Clade: Eudicots Clade: Rosids Order: Rosales Family: Rosaceae Genus: Malus Species: M. domestica Binomial name Malus domestica (Suckow) Borkh., 1803[1] Synonyms[2][3] M. communis Desf., 1768 M. pumila Mil. M. frutescens Medik. M. paradisiaca (L.) Medikus M. sylvestris Mil. Pyrus malus L. Apple An apple is the round, edible fruit of an apple tree (Malus spp.). Fruit trees of the orchard or domestic apple (Malus domestica), the most widely grown in the genus, are cultivated worldwide. The tree originated in Central Asia, where its wild ancestor, Malus sieversii, is still found.",
+   "quote": "Binomial name Malus domestica (Suckow) Borkh., 1803[1] Synonyms[2][3] M. communis Desf., 1768",
+   "claim": {
+    "text": "Its binomial name is Malus domestica, with synonyms like M. communis."
+   },
+   "origin": "model",
+   "alteration": null,
+   "from": "Apple-note-2"
+  },
+  {
+   "id": "c30",
+   "document": "sample",
+   "kind": "note",
+   "passage": "Its Great Red Spot is a storm that has lasted for at least 350 years. Mars is called the Red Planet because iron oxide on its surface gives it a reddish appearance. It has two small moons, Phobos and Deimos. Olympus Mons on Mars is the tallest volcano in the Solar System. Pluto was considered the ninth planet until 2006, when the International Astronomical Union reclassified it as a dwarf planet.",
+   "quote": "Pluto was considered the ninth planet until 2006, when the International Astronomical Union reclassified it as a dwarf planet.",
+   "claim": {
+    "text": "Pluto was considered the ninth planet until 2006, when the International Astronomical Union reclassified it as a dwarf planet."
+   },
+   "origin": "model",
+   "alteration": null,
+   "from": "sample-note-9"
+  },
+  {
+   "id": "c31",
+   "document": "ml-ids-sample",
+   "kind": "note",
+   "passage": "Machine Learning Based Intrusion Detection System This project builds an intrusion detection system that classifies network traffic as normal or malicious. It replaces fixed signature rules with a trained model, so it can flag attacks that no existing rule describes. The system captures packets, groups them into flows, and extracts features such as flow duration, packet counts, and byte rates. A random forest classifier was trained on the CICIDS2017 dataset and reached 97 percent accuracy on held-out traffic. When the model flags a flow, the system writes an alert to a log file with the source address, the destination address, and the predicted attack type. Administrators review these alerts on a simple dashboard.",
+   "quote": "A random forest classifier was trained on the CICIDS2017 dataset and reached 97 percent accuracy on held-out traffic.",
+   "claim": {
+    "text": "A random forest classifier was trained on the CICIDS2017 dataset."
+   },
+   "origin": "model",
+   "alteration": null,
+   "from": "ml-ids-sample-note-5"
+  },
+  {
+   "id": "c32",
+   "document": "Photosynthesis",
+   "kind": "note",
+   "passage": "Photosynthetic organisms also convert around 100–115 billion tons (91–104 Pg petagrams, or billions of metric tons), of carbon into biomass per year. Photosynthesis was discovered in 1779 by Jan Ingenhousz who showed that plants need light, not just soil and water. Overview Most photosynthetic organisms are photoautotrophs, which means that they are able to synthesize food directly from carbon dioxide and water using energy from light. However, not all organisms use carbon dioxide as a source of carbon atoms to carry out photosynthesis; photoheterotrophs use organic compounds, rather than carbon dioxide, as a source of carbon. In plants, algae, and cyanobacteria, photosynthesis releases oxygen. This oxygenic photosynthesis is by far the most common type of photosynthesis used by living organisms.",
+   "quote": "Photosynthesis was discovered in 1779 by Jan Ingenhousz who showed that plants need light, not just soil and water.",
+   "claim": {
+    "text": "Jan Ingenhousz discovered in 1779 that plants need light, not just soil and water."
+   },
+   "origin": "model",
+   "alteration": null,
+   "from": "Photosynthesis-note-26"
+  },
+  {
+   "id": "c33",
+   "document": "sample",
+   "kind": "quiz",
+   "passage": "The Solar System The Solar System formed about 4.6 billion years ago from the gravitational collapse of a giant molecular cloud. Most of its mass is in the Sun, and the rest is mostly in Jupiter. There are eight planets. The four inner planets, Mercury, Venus, Earth and Mars, are terrestrial planets made of rock and metal. The four outer planets are giants: Jupiter and Saturn are gas giants, while Uranus and Neptune are ice giants. Jupiter is the largest planet. It has a mass more than twice that of all the other planets combined. Its Great Red Spot is a storm that has lasted for at least 350 years.",
+   "quote": "The Solar System formed about 4.6 billion years ago",
+   "claim": {
+    "question": "How long ago did the Solar System form?",
+    "options": [
+     "About 3.6 billion years ago",
+     "About 4.6 billion years ago",
+     "About 5.6 billion years ago",
+     "About 6.6 billion years ago"
+    ],
+    "answer": 1
+   },
+   "origin": "model",
+   "alteration": null,
+   "from": "sample-quiz-1"
+  },
+  {
+   "id": "c34",
+   "document": "Printing_press",
+   "kind": "card",
+   "passage": "Global spread The printing press spread rapidly across Europe largely because the equipment was portable, making censorship efforts difficult. When religious or government entities attempted to curtail the technology in one city, the printers would relocate to neighboring cities, further accelerating the press's spread across Europe. Colonial and missionary networks spread the European-style printing press even farther, as Jesuit missionaries established a press at Goa in 1556 with João de Bustamante as its first printer. The Portuguese Jesuit Diogo de Mesquita acquired a press during a visit to Europe in 1586 and maintained it at Nagasaki, producing religious works in Japanese until his death in 1614. The Dominicans set up the first press in the Philippines, publishing the Doctrina Christiana.",
+   "quote": "The printing press spread rapidly across Europe largely because the equipment was portable, making censorship efforts difficult",
+   "claim": {
+    "question": "Why did the printing press spread rapidly across Europe despite censorship efforts?",
+    "answer": "Because the equipment was not portable"
+   },
+   "original": {
+    "question": "Why did the printing press spread rapidly across Europe despite censorship efforts?",
+    "answer": "Because the equipment was portable"
+   },
+   "origin": "altered",
+   "alteration": "negation",
+   "from": "Printing_press-card-6"
+  },
+  {
+   "id": "c35",
+   "document": "sample",
+   "kind": "note",
+   "passage": "Its Great Red Spot is a storm that has lasted for at least 350 years. Mars is called the Red Planet because iron oxide on its surface gives it a reddish appearance. It has two small moons, Phobos and Deimos. Olympus Mons on Mars is the tallest volcano in the Solar System. Pluto was considered the ninth planet until 2006, when the International Astronomical Union reclassified it as a dwarf planet.",
+   "quote": "Mars is called the Red Planet because iron oxide on its surface gives it a reddish appearance.",
+   "claim": {
+    "text": "Venus is called the Red Planet because iron oxide on its surface gives it a reddish appearance."
+   },
+   "original": {
+    "text": "Mars is called the Red Planet because iron oxide on its surface gives it a reddish appearance."
+   },
+   "origin": "altered",
+   "alteration": "swapped_name",
+   "from": "sample-note-7"
+  },
+  {
+   "id": "c36",
+   "document": "Photosynthesis",
+   "kind": "note",
+   "passage": "Later discovery of anoxygenic photosynthetic bacteria and photophosphorylation necessitated redefinition of the term. C3 : C4 photosynthesis research In the late 1940s at the University of California, Berkeley, the details of photosynthetic carbon metabolism were sorted out by the chemists Melvin Calvin, Andrew Benson, James Bassham and a score of students and researchers utilizing the carbon-14 isotope and paper chromatography techniques. The pathway of CO2 fixation by the algae Chlorella in a fraction of a second in light resulted in a three carbon molecule called phosphoglyceric acid (PGA). For that original and ground-breaking work, a Nobel Prize in Chemistry was awarded to Melvin Calvin in 1961.",
+   "quote": "For that original and ground-breaking work, a Nobel Prize in Chemistry was awarded to Melvin Calvin in 1961.",
+   "claim": {
+    "text": "Melvin Calvin never won a Nobel Prize for sorting out carbon metabolism using carbon-14 isotopes."
+   },
+   "original": {
+    "text": "Melvin Calvin won a Nobel Prize for sorting out carbon metabolism using carbon-14 isotopes."
+   },
+   "origin": "altered",
+   "alteration": "negation",
+   "from": "Photosynthesis-note-27"
+  },
+  {
+   "id": "c37",
+   "document": "Printing_press",
+   "kind": "quiz",
+   "passage": "Reading habits also shifted, due to the lower cost and wider availability of printed texts compared to manuscripts. Individuals shifted away from communal oral recitation toward silent and private reading, marking what Eisenstein describes as a transition \"from a hearing public to a reading public\". A sermon or speech had required listeners to gather in one place at one time, whereas people scattered across a continent could read a printed text. The reading public was therefore highly individualistic, and its members often did not know each other. After the printing press was invented, wider availability of texts contributed to increasing adult literacy rates across Europe in the next two centuries, although the growth of literacy differed regionally.",
+   "quote": "Individuals shifted away from communal oral recitation toward silent and private reading",
+   "claim": {
+    "question": "What shift in reading habits occurred due to the lower cost and wider availability of printed texts?",
+    "options": [
+     "from silent reading to communal oral recitation",
+     "from private reading to public broadcasting",
+     "from communal oral recitation to silent and private reading",
+     "from handwritten manuscripts to digital screens"
+    ],
+    "answer": 2
+   },
+   "origin": "model",
+   "alteration": null,
+   "from": "Printing_press-quiz-6"
+  },
+  {
+   "id": "c38",
+   "document": "Printing_press",
+   "kind": "card",
+   "passage": "The first factor, the screw press, permitted direct pressure to be applied on a flat plane. Used for a variety of tasks and introduced by the Romans in the 1st century AD, it was often used by farmers for pressing grapes to make wine and olives to make oil. Gutenberg may also have been inspired by the paper presses which operated similarly to the screw press and were used across the German lands from the late 14th century. He adopted the basic design of the screw press, thereby mechanizing the printing process. Printing brought the machine different demands, and Gutenberg adapted the construction so that the platen (a flat surface) exerted even pressure across the paper with minimal smearing.",
+   "quote": "Gutenberg may also have been inspired by the paper presses which operated similarly to the screw press and were used across the German lands from the late 14th century",
+   "claim": {
+    "question": "What Roman invention inspired Gutenberg's adaptation of the screw press?",
+    "answer": "Paper presses used across German lands"
+   },
+   "origin": "model",
+   "alteration": null,
+   "from": "Printing_press-card-2"
+  },
+  {
+   "id": "c39",
+   "document": "Printing_press",
+   "kind": "note",
+   "passage": "The historians Lucien Febvre and Henri-Jean Martin conclude that by this date, the printed book was used throughout Europe. In Italy, a center of early printing, print shops existed in 77 cities and towns by 1500, while 151 locations in Italy had hosted printing at some point by 1600. In 1600, nearly 3,000 printers are known to have been active in Italy. However, printing centers soon emerged, and one third of the Italian printers published in Venice. By 1500, printing presses throughout Western Europe had produced over 20 million copies. Their output grew to an estimated 150–200 million copies by 1600. European printing presses c. 1600 could produce between 1,500 and 3,600 impressions per workday.",
+   "quote": "By 1500, printing presses throughout Western Europe had produced over 20 million copies.",
+   "claim": {
+    "text": "Printing presses produced over 20 million copies by 1500 and grew to 150-200 million by 1600."
+   },
+   "origin": "model",
+   "alteration": null,
+   "from": "Printing_press-note-8"
+  },
+  {
+   "id": "c40",
+   "document": "Transmission_Control_Protocol",
+   "kind": "quiz",
+   "passage": "Multipath TCP also brings performance benefits in datacenter environments. The reference implementation of Multipath TCP was developed in the Linux kernel. Multipath TCP is used to support the Siri voice recognition application on iPhones, iPads and Macs. tcpcrypt is an extension proposed in July 2010 to provide transport-level encryption directly in TCP itself. It is designed to work transparently and not require any configuration. Unlike TLS (SSL), tcpcrypt itself does not provide authentication, but provides simple primitives down to the application to do that. The tcpcrypt RFC was published by the IETF in May 2019. TCP Fast Open is an extension to speed up the opening of successive TCP connections between two endpoints.",
+   "quote": "Multipath TCP is used to support the Siri voice recognition application on iPhones, iPads and Macs.",
+   "claim": {
+    "question": "Which application is cited as using Multipath TCP on iPhones, iPads and Macs?",
+    "options": [
+     "Cortana",
+     "WhatsApp",
+     "Skype",
+     "Zoom"
+    ],
+    "answer": 0
+   },
+   "original": {
+    "question": "Which application is cited as using Multipath TCP on iPhones, iPads and Macs?",
+    "options": [
+     "Siri",
+     "WhatsApp",
+     "Skype",
+     "Zoom"
+    ],
+    "answer": 0
+   },
+   "origin": "altered",
+   "alteration": "swapped_name",
+   "from": "Transmission_Control_Protocol-quiz-6"
+  },
+  {
+   "id": "c41",
+   "document": "sample",
+   "kind": "card",
+   "passage": "The Solar System The Solar System formed about 4.6 billion years ago from the gravitational collapse of a giant molecular cloud. Most of its mass is in the Sun, and the rest is mostly in Jupiter. There are eight planets. The four inner planets, Mercury, Venus, Earth and Mars, are terrestrial planets made of rock and metal. The four outer planets are giants: Jupiter and Saturn are gas giants, while Uranus and Neptune are ice giants. Jupiter is the largest planet. It has a mass more than twice that of all the other planets combined. Its Great Red Spot is a storm that has lasted for at least 350 years.",
+   "quote": "the rest is mostly in Jupiter",
+   "claim": {
+    "question": "Which planet contains most of the remaining mass after the Sun?",
+    "answer": "Jupiter"
+   },
+   "origin": "model",
+   "alteration": null,
+   "from": "sample-card-3"
+  },
+  {
+   "id": "c42",
+   "document": "sample",
+   "kind": "card",
+   "passage": "Its Great Red Spot is a storm that has lasted for at least 350 years. Mars is called the Red Planet because iron oxide on its surface gives it a reddish appearance. It has two small moons, Phobos and Deimos. Olympus Mons on Mars is the tallest volcano in the Solar System. Pluto was considered the ninth planet until 2006, when the International Astronomical Union reclassified it as a dwarf planet.",
+   "quote": "Mars is called the Red Planet because iron oxide on its surface gives it a reddish appearance.",
+   "claim": {
+    "question": "Why is Mars called the Red Planet?",
+    "answer": "Iron oxide in its atmosphere gives it a reddish appearance"
+   },
+   "original": {
+    "question": "Why is Mars called the Red Planet?",
+    "answer": "Iron oxide on its surface gives it a reddish appearance"
+   },
+   "origin": "altered",
+   "alteration": "wrong_detail",
+   "from": "sample-card-11"
+  },
+  {
+   "id": "c43",
+   "document": "Printing_press",
+   "kind": "quiz",
+   "passage": "The codex book format also dated to the Roman Empire, and was of utmost significance in the history of the book. By 500 AD, Christian and Muslim scribes had shifted from using scrolls to using codices. The codex proved more convenient than the scroll format because of its greater legibility, compact arrangement, lower costs, and the availability of both left and right pages. Medieval papermakers had successfully mechanized the production of paper. Water-powered paper mills were in usage by 1282, resulting in much greater production and replacing the tedious processes associated with Chinese and Muslim papermaking. The number of papermaking centers grew rapidly in late 13th-century Italy, causing paper to become much cheaper than parchment.",
+   "quote": "By 500 AD, Christian and Muslim scribes had shifted from using scrolls to using codices.",
+   "claim": {
+    "question": "By what year had Christian and Muslim scribes shifted from using scrolls to using codices?",
+    "options": [
+     "300 AD",
+     "400 AD",
+     "500 AD",
+     "600 AD"
+    ],
+    "answer": 2
+   },
+   "origin": "model",
+   "alteration": null,
+   "from": "Printing_press-quiz-2"
+  },
+  {
+   "id": "c44",
+   "document": "ml-ids-sample",
+   "kind": "quiz",
+   "passage": "Machine Learning Based Intrusion Detection System This project builds an intrusion detection system that classifies network traffic as normal or malicious. It replaces fixed signature rules with a trained model, so it can flag attacks that no existing rule describes. The system captures packets, groups them into flows, and extracts features such as flow duration, packet counts, and byte rates. A random forest classifier was trained on the CICIDS2017 dataset and reached 97 percent accuracy on held-out traffic. When the model flags a flow, the system writes an alert to a log file with the source address, the destination address, and the predicted attack type. Administrators review these alerts on a simple dashboard.",
+   "quote": "A random forest classifier was trained on the CICIDS2017 dataset",
+   "claim": {
+    "question": "What dataset was used to train the random forest classifier?",
+    "options": [
+     "CICIDS2017",
+     "NSL-KDD",
+     "UNSW-NB15",
+     "KDD Cup 99"
+    ],
+    "answer": 1
+   },
+   "original": {
+    "question": "What dataset was used to train the random forest classifier?",
+    "options": [
+     "CICIDS2017",
+     "NSL-KDD",
+     "UNSW-NB15",
+     "KDD Cup 99"
+    ],
+    "answer": 0
+   },
+   "origin": "altered",
+   "alteration": "wrong_key",
+   "from": "ml-ids-sample-quiz-3"
+  },
+  {
+   "id": "c45",
+   "document": "Apple",
+   "kind": "card",
+   "passage": "Traditional methods include drying and making apple butter.[91] Juice and cider are produced commercially; cider is a significant industry in regions such as the West of England and Normandy.[91] A toffee apple (UK) or caramel apple (US) is a confection made by coating an apple in hot toffee or caramel candy respectively and allowing it to cool.[94][10] Apples and honey are a ritual food pairing eaten during the Jewish New Year of Rosh Hashanah.[95] Apples are an important ingredient in many desserts, such as pies, crumbles, and cakes. When cooked, some apple cultivars easily form a purée known as apple sauce, which can be cooked down to form a preserve, apple butter.",
+   "quote": "A toffee apple (UK) or caramel apple (US) is a confection made by coating an apple in hot toffee or caramel candy respectively and allowing it to cool.",
+   "claim": {
+    "question": "What is a confection made by coating an apple in hot toffee or caramel candy called?",
+    "answer": "A toffee apple or caramel apple"
+   },
+   "origin": "model",
+   "alteration": null,
+   "from": "Apple-card-11"
+  },
+  {
+   "id": "c46",
+   "document": "Transmission_Control_Protocol",
+   "kind": "card",
+   "passage": "Having a mechanism for flow control is essential in an environment where machines of diverse network speeds communicate. For example, if a PC sends data to a smartphone that is slowly processing received data, the smartphone must be able to regulate the data flow so as not to be overwhelmed. TCP uses a sliding window flow control protocol. In each TCP segment, the receiver specifies in the receive window field the amount of additionally received data (in bytes) that it is willing to buffer for the connection. The sending host can send only up to that amount of data before it must wait for an acknowledgment and receive window update from the receiving host.",
+   "quote": "TCP uses a sliding window flow control protocol.",
+   "claim": {
+    "question": "How does TCP regulate data flow to prevent a slow receiver from being overwhelmed?",
+    "answer": "By using a fixed window flow control protocol."
+   },
+   "original": {
+    "question": "How does TCP regulate data flow to prevent a slow receiver from being overwhelmed?",
+    "answer": "By using a sliding window flow control protocol."
+   },
+   "origin": "altered",
+   "alteration": "wrong_detail",
+   "from": "Transmission_Control_Protocol-card-8"
+  },
+  {
+   "id": "c47",
+   "document": "Printing_press",
+   "kind": "note",
+   "passage": "Printed newspapers, pamphlets and bulletins later played a major ideological role in the events before the English Civil War and the American and French Revolutions, through. Quantitative work in economics has tested some of these claims. Jeremiah Dittmar has shown that over the 16th century, cities which had established presses by 1500 grew around 60 percent faster than comparable cities which had not. Separate regressions using distance from Mainz as an instrument for press adoption support that finding. Also analyzing distance, Jared Rubin estimates that cities with presses before 1500 were 52 percent more likely to have adopted Protestantism by 1530, 42 percent more likely by 1560, and 29 percent by 1600.",
+   "quote": "Jared Rubin estimates that cities with presses before 1500 were 52 percent more likely to have adopted Protestantism by 1530.",
+   "claim": {
+    "text": "Cities with presses before 1500 were less likely to adopt Protestantism by 1530."
+   },
+   "original": {
+    "text": "Cities with presses before 1500 were more likely to adopt Protestantism by 1530."
+   },
+   "origin": "altered",
+   "alteration": "opposite",
+   "from": "Printing_press-note-23"
+  },
+  {
+   "id": "c48",
+   "document": "Printing_press",
+   "kind": "quiz",
+   "passage": "The Dominicans set up the first press in the Philippines, publishing the Doctrina Christiana. In the Ottoman Empire, Sephardi Jews quickly established a Hebrew press in Constantinople in 1493, an Armenian press was established in 1567, and a Greek press in 1627. The first printing press in the Middle East, the Safed Hebrew printing press, was established by two Ashkenazi Jewish immigrants in 1577. İbrahim Müteferrika established the first Arabic-script press for a Muslim readership in 1727. Esad of Ioannina assisted Müteferrika in the development of his press, which produced seventeen works before 1742.",
+   "quote": "İbrahim Müteferrika established the first Arabic-script press for a Muslim readership in 1727.",
+   "claim": {
+    "question": "In which year was the first Arabic-script press for a Muslim readership established by İbrahim Müteferrika?",
+    "options": [
+     "1493",
+     "1567",
+     "1577",
+     "1627"
+    ],
+    "answer": 3
+   },
+   "original": {
+    "question": "In which year was the first Arabic-script press for a Muslim readership established by İbrahim Müteferrika?",
+    "options": [
+     "1493",
+     "1567",
+     "1577",
+     "1727"
+    ],
+    "answer": 3
+   },
+   "origin": "altered",
+   "alteration": "number",
+   "from": "Printing_press-quiz-4"
+  },
+  {
+   "id": "c49",
+   "document": "Apple",
+   "kind": "card",
+   "passage": "LibriVox Audio 01:01:35 (full text (https://archive.org/ details/excursions1863t hor/page/266)) Problems playing this file? See media help. exchange with Malus sylvestris, the crabapple, resulted in populations of apples being more related to crabapples than to the more morphologically similar progenitor Malus sieversii. In strains without recent admixture the contribution of the latter predominates.[30][31][32] The apple is thought to have been domesticated 4,000–10,000 years ago in the Tian Shan mountains, and then to have travelled along the Silk Road to Europe, with hybridisation and introgression of wild crabapples from Siberia (M. baccata), the Caucasus (M. orientalis), and Europe (M. sylvestris).",
+   "quote": "The apple is thought to have been domesticated 4,000–10,000 years ago in the Tian Shan mountains",
+   "claim": {
+    "question": "Approximately when was the apple thought to have been domesticated?",
+    "answer": "4,000–10,000 years ago"
+   },
+   "origin": "model",
+   "alteration": null,
+   "from": "Apple-card-5"
+  },
+  {
+   "id": "c50",
+   "document": "Transmission_Control_Protocol",
+   "kind": "card",
+   "passage": "The client sets the segment's sequence number to a random value x. SYN-ACK: In response, the server replies with a SYN-ACK. The acknowledgment number is set to one more than the received sequence number, i.e., x + 1, and the sequence number that the server chooses for the packet is another random number, y. ACK: Finally, the client sends an ACK back to the server. The sequence number is set to the received acknowledgment value, i.e., x + 1, and the acknowledgment number is set to one more than the received sequence number, i.e., y + 1. Steps 1 and 2 establish and acknowledge the sequence number for one direction (client to server).",
+   "quote": "The acknowledgment number is set to one more than the received sequence number, i.e., x + 1, and the sequence number that the server chooses for the packet is another random number, y.",
+   "claim": {
+    "question": "What does the server's SYN-ACK packet contain regarding sequence numbers?",
+    "answer": "An acknowledgment number of x+1 and a new random sequence number y."
+   },
+   "origin": "model",
+   "alteration": null,
+   "from": "Transmission_Control_Protocol-card-6"
+  },
+  {
+   "id": "c51",
+   "document": "Transmission_Control_Protocol",
+   "kind": "note",
+   "passage": "This guards against excessive transmission traffic due to faulty or malicious actors, such as man-in-the-middle denial of service attackers. Accurate RTT estimates are important for loss recovery, as they allow a sender to assume an unacknowledged packet to be lost after sufficient time elapses (i.e., determining the RTO time). Retransmission ambiguity can lead a sender's estimate of RTT to be imprecise. In an environment with variable RTTs, spurious timeouts can occur: if the RTT is under-estimated, then the RTO fires and triggers a needless retransmit and slow-start.",
+   "quote": "Accurate RTT estimates are important for loss recovery, as they allow a sender to assume an unacknowledged packet to be lost after sufficient time elapses.",
+   "claim": {
+    "text": "Accurate RTT estimates are important for loss recovery, allowing a receiver to assume an unacknowledged packet is lost."
+   },
+   "original": {
+    "text": "Accurate RTT estimates are important for loss recovery, allowing a sender to assume an unacknowledged packet is lost."
+   },
+   "origin": "altered",
+   "alteration": "wrong_detail",
+   "from": "Transmission_Control_Protocol-note-24"
+  },
+  {
+   "id": "c52",
+   "document": "sample",
+   "kind": "quiz",
+   "passage": "Its Great Red Spot is a storm that has lasted for at least 350 years. Mars is called the Red Planet because iron oxide on its surface gives it a reddish appearance. It has two small moons, Phobos and Deimos. Olympus Mons on Mars is the tallest volcano in the Solar System. Pluto was considered the ninth planet until 2006, when the International Astronomical Union reclassified it as a dwarf planet.",
+   "quote": "Olympus Mons on Mars is the tallest volcano in the Solar System.",
+   "claim": {
+    "question": "What is Olympus Mons on Mars?",
+    "options": [
+     "The largest ocean",
+     "The tallest volcano in the Solar System",
+     "A deep canyon system",
+     "A massive crater"
+    ],
+    "answer": 3
+   },
+   "original": {
+    "question": "What is Olympus Mons on Mars?",
+    "options": [
+     "The largest ocean",
+     "The tallest volcano in the Solar System",
+     "A deep canyon system",
+     "A massive crater"
+    ],
+    "answer": 1
+   },
+   "origin": "altered",
+   "alteration": "wrong_key",
+   "from": "sample-quiz-7"
+  },
+  {
+   "id": "c53",
+   "document": "ml-ids-sample",
+   "kind": "quiz",
+   "passage": "Machine Learning Based Intrusion Detection System This project builds an intrusion detection system that classifies network traffic as normal or malicious. It replaces fixed signature rules with a trained model, so it can flag attacks that no existing rule describes. The system captures packets, groups them into flows, and extracts features such as flow duration, packet counts, and byte rates. A random forest classifier was trained on the CICIDS2017 dataset and reached 97 percent accuracy on held-out traffic. When the model flags a flow, the system writes an alert to a log file with the source address, the destination address, and the predicted attack type. Administrators review these alerts on a simple dashboard.",
+   "quote": "Administrators review these alerts on a simple dashboard.",
+   "claim": {
+    "question": "How does the system handle alerts after they are flagged?",
+    "options": [
+     "Administrators review them on a simple dashboard",
+     "They are automatically blocked by a firewall",
+     "They are encrypted and sent to a central server",
+     "They are deleted immediately to save space"
+    ],
+    "answer": 0
+   },
+   "origin": "model",
+   "alteration": null,
+   "from": "ml-ids-sample-quiz-7"
+  },
+  {
+   "id": "c54",
+   "document": "Photosynthesis",
+   "kind": "card",
+   "passage": "Z scheme In plants, light-dependent reactions occur in the thylakoid membranes of the chloroplasts where they drive the synthesis of ATP and NADPH. The light-dependent reactions are of two forms: cyclic and non-cyclic. In the non-cyclic reaction, the photons are captured in the light-harvesting antenna complexes of photosystem II by chlorophyll and other accessory pigments (see diagram \"Z-scheme\"). The absorption of a photon by the antenna complex loosens an electron by a process called photoinduced charge separation. The antenna system is at the core of the chlorophyll molecule of the photosystem II reaction center. That loosened electron is taken up by the primary electron-acceptor molecule, pheophytin.",
+   "quote": "In plants, light-dependent reactions occur in the thylakoid membranes of the chloroplasts where they drive the synthesis of ATP and NADPH.",
+   "claim": {
+    "question": "Where do light-dependent reactions occur within the chloroplast?",
+    "answer": "The stroma of the chloroplast"
+   },
+   "original": {
+    "question": "Where do light-dependent reactions occur within the chloroplast?",
+    "answer": "Thylakoid membranes"
+   },
+   "origin": "altered",
+   "alteration": "wrong_detail",
+   "from": "Photosynthesis-card-6"
+  },
+  {
+   "id": "c55",
+   "document": "Apple",
+   "kind": "card",
+   "passage": "The bud scales have very hairy edges. When emerging from the buds, the leaves are convolute, meaning that their edges overlap each other.[2] Leaves can be simple ovals (elliptic), medium or wide in width, somewhat egg-shaped with the wider portion toward their base (ovate), or even with sides that are more parallel to each other instead of curved (oblong) with a narrow pointed end.[9][2] The edges have broadly-angled teeth, but do not have lobes.",
+   "quote": "When emerging from the buds, the leaves are convolute, meaning that their edges overlap each other.",
+   "claim": {
+    "question": "What does it mean when apple leaves are described as convolute?",
+    "answer": "Their edges stay apart from each other"
+   },
+   "original": {
+    "question": "What does it mean when apple leaves are described as convolute?",
+    "answer": "Their edges overlap each other"
+   },
+   "origin": "altered",
+   "alteration": "opposite",
+   "from": "Apple-card-3"
+  },
+  {
+   "id": "c56",
+   "document": "Transmission_Control_Protocol",
+   "kind": "quiz",
+   "passage": "This assures that a TCP application is aware there was a data loss. A connection can be in a half-open state, in which case one side has terminated the connection, but the other has not. The side that has terminated can no longer send any data into the connection, but the other side can. The terminating side should continue reading the data until the other side terminates as well. Resource usage Most implementations allocate an entry in a table that maps a session to a running operating system process. Because TCP packets do not include a session identifier, both endpoints identify the session using the client's address and port.",
+   "quote": "Because TCP packets do not include a session identifier, both endpoints identify the session using the client's address and port.",
+   "claim": {
+    "question": "How do both endpoints identify a TCP session?",
+    "options": [
+     "Using a unique session identifier in the packet",
+     "Using the client's address and port",
+     "Using the server's IP address only",
+     "Using a timestamp value"
+    ],
+    "answer": 0
+   },
+   "original": {
+    "question": "How do both endpoints identify a TCP session?",
+    "options": [
+     "Using a unique session identifier in the packet",
+     "Using the client's address and port",
+     "Using the server's IP address only",
+     "Using a timestamp value"
+    ],
+    "answer": 1
+   },
+   "origin": "altered",
+   "alteration": "wrong_key",
+   "from": "Transmission_Control_Protocol-quiz-3"
+  },
+  {
+   "id": "c57",
+   "document": "Transmission_Control_Protocol",
+   "kind": "note",
+   "passage": "Retransmission ambiguity can cause spurious fast retransmissions and congestion avoidance if there is reordering beyond the duplicate acknowledgment threshold. In the last two decades more packet reordering has been observed over the Internet which led TCP implementations, such as the one in the Linux Kernel to adopt heuristic methods to scale the duplicate acknowledgment threshold. Recently, there have been efforts to completely phase out duplicate-ACK-based fast-retransmissions and replace them with timer based ones. (Not to be confused with the classic RTO discussed below). The time based loss detection algorithm called Recent Acknowledgment (RACK) has been adopted as the default algorithm in Linux and Windows.",
+   "quote": "Retransmission ambiguity can cause spurious fast retransmissions and congestion avoidance if there is reordering beyond the duplicate acknowledgment threshold.",
+   "claim": {
+    "text": "Retransmission ambiguity cannot cause spurious fast retransmissions, even if there is reordering beyond the duplicate acknowledgment threshold."
+   },
+   "original": {
+    "text": "Retransmission ambiguity can cause spurious fast retransmissions if there is reordering beyond the duplicate acknowledgment threshold."
+   },
+   "origin": "altered",
+   "alteration": "negation",
+   "from": "Transmission_Control_Protocol-note-22"
+  },
+  {
+   "id": "c58",
+   "document": "sample",
+   "kind": "note",
+   "passage": "The Solar System The Solar System formed about 4.6 billion years ago from the gravitational collapse of a giant molecular cloud. Most of its mass is in the Sun, and the rest is mostly in Jupiter. There are eight planets. The four inner planets, Mercury, Venus, Earth and Mars, are terrestrial planets made of rock and metal. The four outer planets are giants: Jupiter and Saturn are gas giants, while Uranus and Neptune are ice giants. Jupiter is the largest planet. It has a mass more than twice that of all the other planets combined. Its Great Red Spot is a storm that has lasted for at least 350 years.",
+   "quote": "Its Great Red Spot is a storm that has lasted for at least 350 years.",
+   "claim": {
+    "text": "Its Great Red Spot is a storm that has lasted for at least 350 years."
+   },
+   "origin": "model",
+   "alteration": null,
+   "from": "sample-note-6"
+  },
+  {
+   "id": "c59",
+   "document": "Printing_press",
+   "kind": "note",
+   "passage": "The Dominicans set up the first press in the Philippines, publishing the Doctrina Christiana. In the Ottoman Empire, Sephardi Jews quickly established a Hebrew press in Constantinople in 1493, an Armenian press was established in 1567, and a Greek press in 1627. The first printing press in the Middle East, the Safed Hebrew printing press, was established by two Ashkenazi Jewish immigrants in 1577. İbrahim Müteferrika established the first Arabic-script press for a Muslim readership in 1727. Esad of Ioannina assisted Müteferrika in the development of his press, which produced seventeen works before 1742.",
+   "quote": "İbrahim Müteferrika established the first Arabic-script press for a Muslim readership in 1727.",
+   "claim": {
+    "text": "The first Arabic-script press was established by İbrahim Müteferrika in 1827."
+   },
+   "original": {
+    "text": "The first Arabic-script press was established by İbrahim Müteferrika in 1727."
+   },
+   "origin": "altered",
+   "alteration": "number",
+   "from": "Printing_press-note-11"
+  },
+  {
+   "id": "c60",
+   "document": "sample",
+   "kind": "card",
+   "passage": "The Solar System The Solar System formed about 4.6 billion years ago from the gravitational collapse of a giant molecular cloud. Most of its mass is in the Sun, and the rest is mostly in Jupiter. There are eight planets. The four inner planets, Mercury, Venus, Earth and Mars, are terrestrial planets made of rock and metal. The four outer planets are giants: Jupiter and Saturn are gas giants, while Uranus and Neptune are ice giants. Jupiter is the largest planet. It has a mass more than twice that of all the other planets combined. Its Great Red Spot is a storm that has lasted for at least 350 years.",
+   "quote": "It has a mass more than twice that of all the other planets combined.",
+   "claim": {
+    "question": "How does Jupiter's mass compare to all other planets combined?",
+    "answer": "More than twice as much"
+   },
+   "origin": "model",
+   "alteration": null,
+   "from": "sample-card-8"
+  }
+ ]
+}

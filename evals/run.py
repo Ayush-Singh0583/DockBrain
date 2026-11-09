@@ -1,8 +1,12 @@
 """Measure search and offline answers on the question sets. Offline only; nothing is sent anywhere.
 
-    .venv/bin/python -B evals/run.py --prepare   # once: download the public Wikipedia "Apple" PDF and
-                                                 # convert docs/*.docx to PDF (needs network and LibreOffice)
+    .venv/bin/python -B evals/run.py --prepare   # once: download the public Wikipedia "Apple" PDF and, if
+                                                 # this copy has the private reports in docs/, convert them
+                                                 # to PDF (needs network and LibreOffice)
     .venv/bin/python -B evals/run.py             # print the numbers
+
+The private reports and the questions about them aren't in the repository, so in a public copy
+these numbers cover the public and invented documents only.
 """
 import argparse
 import os
@@ -22,14 +26,22 @@ from rag.generator import ExtractiveGenerator  # noqa: E402
 APPLE_URL = "https://en.wikipedia.org/api/rest_v1/page/pdf/Apple"
 
 
+def report_files(folder: str = "docs") -> list[str]:
+    """The private reports to convert, if this copy has them."""
+    if not os.path.isdir(folder):
+        return []
+    return [os.path.join(folder, f) for f in sorted(os.listdir(folder)) if f.endswith(".docx")]
+
+
 def prepare() -> None:
     os.makedirs(DATA, exist_ok=True)
     request = urllib.request.Request(APPLE_URL, headers={"User-Agent": "DockBrain-evals/0.1"})
     with urllib.request.urlopen(request, timeout=90) as response, open(APPLE, "wb") as out:
         out.write(response.read())
-    docx = [os.path.join("docs", f) for f in sorted(os.listdir("docs")) if f.endswith(".docx")]
-    subprocess.run(["soffice", "--headless", "--convert-to", "pdf", "--outdir", DATA, *docx], check=True,
-                   stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
+    docx = report_files()
+    if docx:
+        subprocess.run(["soffice", "--headless", "--convert-to", "pdf", "--outdir", DATA, *docx], check=True,
+                       stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
     print(f"Prepared {DATA}/. The Wikipedia PDF changes over time, so numbers can drift slightly.")
 
 
@@ -58,6 +70,9 @@ def main() -> None:
           f"(of which unanswerable questions correctly not answered: "
           f"{sum(judge(c, rag(c[0]).ask(c[1])[0]) for c in unanswerable)}/{len(unanswerable)})")
     pdf = [c for c in OLD if c[0].endswith(".docx")]
+    if not pdf:
+        print("report questions skipped: the private reports aren't in this copy")
+        return
     as_pdf = sum(judge(c, rag(f"{DATA}/{os.path.basename(c[0])[:-5]}.pdf").ask(c[1])[0]) for c in pdf)
     print(f"report questions as .docx {sum(judge(c, rag(c[0]).ask(c[1])[0]) for c in pdf)}/{len(pdf)}, "
           f"as PDF conversions {as_pdf}/{len(pdf)}")

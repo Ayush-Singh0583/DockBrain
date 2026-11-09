@@ -1,3 +1,26 @@
 # All optional. DockBrain reads .txt, .md and .docx and answers offline with no packages.
-pypdf[crypto]  # to read .pdf files, including encrypted ones
-anthropic  # for Claude-written answers
+# Exact versions, including what these packages need, so an install matches what the tests ran on.
+
+# To read .pdf files, including encrypted ones
+pypdf[crypto]==6.21.4
+cryptography==50.0.2
+cffi==2.1.1
+pycparser==3.12
+
+# For Claude-written answers
+anthropic==2.6.0
+annotated-types==0.8.0
+anyio==4.16.0
+docstring_parser==0.18.0
+h11==0.16.0
+httpcore2==2.16.0
+httpx2==2.16.0
+idna==3.20
+jiter==0.18.0
+opentelemetry-api==1.45.2
+pydantic==2.14.3
+pydantic_core==2.50.4
+sniffio==1.3.1
+truststore==0.10.5
+typing-inspection==0.4.5
+typing_extensions==4.16.0

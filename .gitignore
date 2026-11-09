@@ -4,3 +4,6 @@ __pycache__/
 build/
 .env
 evals/data/
+# Private reports, and the evaluation questions written about them. Never publish these.
+docs/
+evals/private_questions.py

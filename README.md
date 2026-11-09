@@ -38,8 +38,8 @@ These instructions were tested on Linux. On macOS the commands should be the sam
 ### 1. Get the code
 
 ```bash
-git clone https://github.com/Ayush-Singh0583/DocBrain.git
-cd DocBrain
+git clone https://github.com/Ayush-Singh0583/DockBrain.git
+cd DockBrain
 ```
 
 ### 2. Set up Python
@@ -204,6 +204,10 @@ npm test
 npm run build
 ```
 
+GitHub runs the same checks on every push to `main` and every pull request (`.github/workflows/ci.yml`), with and without the optional Python packages. Python packages are pinned to exact versions in `requirements.txt`, and web packages in `FRONTEND/package-lock.json`.
+
+To measure how often the checks on model-written notes, cards and quiz questions are wrong, see [`evals/claims/README.md`](evals/claims/README.md).
+
 To see what a model writes for a document, with Ollama running:
 
 ```bash
@@ -238,6 +242,6 @@ More detail:
 - The server's logs don't contain file names, document text, questions or answers.
 - The backend has no login, so keep it on `127.0.0.1` and don't expose it to a network.
 - Scanned pages and images aren't read, and tables lose their layout.
-- Each card, quiz question and note point is checked against a quote from your document. That proves it comes from the document, not that it's a good question, so some can still be trivial or filed under the wrong heading.
+- Each card, quiz question and note point must come with a quote found in your document and share words with it. That doesn't prove the quote supports it: a claim that reverses its quote can still pass, and some items are trivial or filed under the wrong heading. When something matters, read the quote or passage shown with it. [`evals/claims/README.md`](evals/claims/README.md) measures how often this goes wrong.
 - Notes read at most 40 passages, so long documents are sampled.
 - "Know it" and "Review again" marks aren't saved after you close the page.
