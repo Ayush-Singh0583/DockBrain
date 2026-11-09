@@ -4,11 +4,7 @@
 
 <br><br>
 
-![Python 3.14](https://img.shields.io/badge/Python-3.14-2152dc?style=flat-square&logo=python&logoColor=white)
-![React 19](https://img.shields.io/badge/React-19-2152dc?style=flat-square&logo=react&logoColor=white)
-![TypeScript](https://img.shields.io/badge/TypeScript-strict-2152dc?style=flat-square&logo=typescript&logoColor=white)
-![three.js](https://img.shields.io/badge/three.js-3D_robot-0e1731?style=flat-square&logo=threedotjs&logoColor=white)
-![Ollama](https://img.shields.io/badge/Ollama-local_AI-0e1731?style=flat-square&logo=ollama&logoColor=white)
+[![CI](https://github.com/Ayush-Singh0583/DockBrain/actions/workflows/ci.yml/badge.svg)](https://github.com/Ayush-Singh0583/DockBrain/actions/workflows/ci.yml) ![Python 3.14](https://img.shields.io/badge/Python-3.14-2152dc?style=flat-square&logo=python&logoColor=white) ![React 19](https://img.shields.io/badge/React-19-2152dc?style=flat-square&logo=react&logoColor=white) ![TypeScript](https://img.shields.io/badge/TypeScript-strict-2152dc?style=flat-square&logo=typescript&logoColor=white) ![three.js](https://img.shields.io/badge/three.js-3D_robot-0e1731?style=flat-square&logo=threedotjs&logoColor=white) ![Ollama](https://img.shields.io/badge/Ollama-local_AI-0e1731?style=flat-square&logo=ollama&logoColor=white)
 
 ### Upload a document and study it.
 
@@ -83,7 +79,7 @@ Every answer is labelled, so you can tell what you're reading:
 
 | Label | What it means |
 | --- | --- |
-| **From the document** | Backed by the passages it cites. |
+| **From the document** | Answered from your document, citing the passages it used. |
 | **Partly from the document** | Some of it is cited, and the rest is marked as general knowledge. |
 | **General knowledge** | The passages it searched didn't have the answer, so the model answered from what it knows. |
 | **Not enough evidence** | It couldn't find an answer, and says so rather than guessing. |
