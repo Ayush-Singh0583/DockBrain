@@ -1,2 +1,3 @@
-# Optional: only needed for LLM-generated answers. Retrieval is pure Python.
-anthropic
+# All optional. DockBrain reads .txt, .md and .docx and answers offline with no packages.
+pypdf[crypto]  # to read .pdf files, including encrypted ones
+anthropic  # for Claude-written answers

@@ -1,0 +1,119 @@
+.welcome { --overlap: 72px; }
+.welcome .band { padding-bottom: calc(var(--overlap) + var(--space-5)); }
+
+/* ---- the hero: the robot, its greeting and the question, centred on the band ---- */
+.welcome__hero {
+  display: grid;
+  justify-items: center;
+  gap: var(--space-3);
+  padding-top: var(--space-2);
+  text-align: center;
+}
+.welcome__robot.robot { --robot-width: clamp(150px, 21vh, 210px); }
+.welcome__robot::before { /* a flat stage disc behind the robot */
+  content: '';
+  position: absolute;
+  left: -26%;
+  right: -26%;
+  top: 2%;
+  bottom: 3%;
+  border-radius: 50%;
+  background: var(--band-disc);
+  box-shadow: inset 0 0 0 1px var(--band-line);
+}
+.welcome__bubble { margin-top: var(--space-2); padding: var(--space-2) var(--space-5); border-radius: 999px; box-shadow: var(--shadow-3); }
+.welcome__bubble .bubble__text { font-size: var(--text-md); }
+.welcome__title {
+  max-width: 26ch;
+  margin-top: var(--space-2);
+  font-size: var(--text-4xl);
+  line-height: 1.08;
+  letter-spacing: -0.03em;
+  color: var(--band-text);
+}
+.welcome__hi { color: var(--band-hi); }
+.welcome__lede { max-width: 56ch; font-size: var(--text-lg); line-height: 1.55; color: var(--band-text-2); }
+
+/* ---- the four activities ---- */
+.choices {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: var(--space-4);
+}
+.choice {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--space-4);
+  width: 100%;
+  height: 100%;
+  padding: var(--space-5);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  background: var(--surface);
+  box-shadow: var(--shadow-3);
+  color: var(--text);
+  text-align: left;
+  transition: border-color var(--motion-150) var(--ease-out), transform var(--motion-200) var(--ease-out);
+}
+.choice:hover { border-color: var(--accent); transform: translateY(-3px); }
+.choice:active { transform: none; }
+.choice:disabled { border-style: dashed; background: var(--surface-2); box-shadow: none; transform: none; cursor: not-allowed; }
+.choice:disabled .choice__icon { background: var(--surface); color: var(--text-3); }
+.choice__icon {
+  flex: none;
+  display: grid;
+  place-items: center;
+  width: 48px;
+  height: 48px;
+  border-radius: 14px;
+  background: var(--accent-soft);
+  color: var(--accent-strong);
+}
+.choice__icon svg { width: 24px; height: 24px; }
+.choice__text { display: grid; gap: 6px; padding-right: var(--space-5); }
+.choice__title { font-size: var(--text-lg); font-weight: var(--weight-semibold); letter-spacing: -0.01em; line-height: 1.3; }
+.choice__description { font-size: var(--text-sm); color: var(--text-2); line-height: 1.55; }
+.choice__arrow {
+  position: absolute;
+  right: var(--space-5);
+  top: var(--space-5);
+  width: 20px;
+  height: 20px;
+  color: var(--text-3);
+  transition: transform var(--motion-200) var(--ease-out), color var(--motion-150) var(--ease-out);
+}
+.choice:hover .choice__arrow,
+.choice:focus-visible .choice__arrow { color: var(--accent-strong); transform: translateX(3px); }
+
+.welcome__note { margin: var(--space-5) auto 0; max-width: 60ch; font-size: var(--text-sm); color: var(--text-3); text-align: center; }
+
+/* Between phone and wide: two by two. */
+@media (max-width: 1120px) and (min-width: 861px) {
+  .choices { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .choice { flex-direction: row; align-items: center; padding: var(--space-4) var(--space-5); }
+  .choice__arrow { position: static; margin-left: auto; flex: none; }
+  .choice__text { padding-right: 0; }
+}
+/* Phones and small tablets: a list, so all four sit within the first screen. */
+@media (max-width: 860px) {
+  .welcome { --overlap: 44px; }
+  .welcome .band { padding-bottom: calc(var(--overlap) + var(--space-4)); }
+  .welcome__hero { gap: var(--space-2); }
+  .welcome__robot.robot { --robot-width: 112px; }
+  .welcome__lede { font-size: var(--text-md); }
+  .choices { grid-template-columns: 1fr; gap: var(--space-2); max-width: 560px; margin-inline: auto; }
+  .choice { flex-direction: row; align-items: center; gap: var(--space-3); padding: var(--space-3) var(--space-4); }
+  .choice__icon { width: 40px; height: 40px; border-radius: 12px; }
+  .choice__icon svg { width: 20px; height: 20px; }
+  .choice__arrow { position: static; margin-left: auto; flex: none; }
+  .choice__text { padding-right: 0; }
+  .choice__title { font-size: var(--text-md); }
+}
+/* Short laptop windows: a smaller robot keeps the activities in the first screen. */
+@media (max-height: 760px) and (min-width: 861px) {
+  .welcome { --overlap: 56px; }
+  .welcome__robot.robot { --robot-width: 150px; }
+}

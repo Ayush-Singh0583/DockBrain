@@ -1,0 +1,306 @@
+.workspace { --overlap: 56px; }
+.workspace__panel {
+  position: relative;
+  padding: 0 var(--space-6) var(--space-6);
+  box-shadow: var(--shadow-3);
+}
+/* The sample-content notice reads as one line: its title, then its text. */
+.workspace__demo { margin-bottom: var(--space-5); }
+.workspace__demo .notice__body { display: flex; flex-wrap: wrap; gap: 0 var(--space-2); }
+.workspace__demo .notice__title { white-space: nowrap; }
+.workspace__view:focus-visible { outline-offset: 4px; }
+
+/* -------------------------------------------------------------------- tabs */
+
+.tabs {
+  display: flex;
+  gap: var(--space-1);
+  margin: 0 calc(var(--space-6) * -1) var(--space-5);
+  padding: 0 var(--space-5);
+  border-bottom: 1px solid var(--border);
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+.tab {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  min-height: 48px;
+  padding: 0 var(--space-4);
+  border: 0;
+  background: none;
+  font-weight: 600;
+  color: var(--text-2);
+  white-space: nowrap;
+  transition: color var(--motion-150) var(--ease-out);
+}
+.tab svg { width: 18px; height: 18px; }
+.tab::after {
+  content: '';
+  position: absolute;
+  left: var(--space-3);
+  right: var(--space-3);
+  bottom: -1px;
+  height: 3px;
+  border-radius: 3px 3px 0 0;
+  background: var(--accent);
+  transform: scaleX(0);
+  transition: transform var(--motion-200) var(--ease-out);
+}
+.tab:hover { color: var(--text); }
+.tab[aria-selected='true'] { color: var(--text); }
+.tab[aria-selected='true']::after { transform: scaleX(1); }
+.tab:focus-visible { outline-offset: -4px; border-radius: var(--radius-sm); }
+
+/* ------------------------------------------------------------------- notes */
+
+.notes { display: grid; gap: var(--space-6); }
+.notes__header { display: grid; gap: var(--space-3); }
+.notes__title { font-size: var(--text-2xl); letter-spacing: -0.02em; }
+.notes__summary {
+  max-width: 64ch;
+  padding-left: var(--space-4);
+  border-left: 3px solid var(--accent);
+  font-size: var(--text-lg);
+  line-height: 1.6;
+  color: var(--text-2);
+}
+.notes__sections { display: grid; gap: 0; }
+.notes__section { display: grid; gap: var(--space-3); padding: var(--space-5) 0; border-top: 1px solid var(--border); }
+.notes__section h3 { font-size: var(--text-lg); letter-spacing: -0.01em; }
+.notes__section ul { display: grid; gap: var(--space-2); list-style: none; padding: 0; max-width: 68ch; }
+.notes__section li { position: relative; padding-left: var(--space-5); }
+.notes__section li::before { content: ''; position: absolute; left: 4px; top: 0.7em; width: 7px; height: 7px; border-radius: 50%; background: var(--accent); }
+.notes__next {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-3);
+  padding: var(--space-4) var(--space-5);
+  border-radius: var(--radius-lg);
+  background: var(--surface-2);
+}
+.notes__next-actions { display: flex; flex-wrap: wrap; gap: var(--space-2); }
+
+/* --------------------------------------------------------------------- ask */
+
+.ask { display: grid; gap: var(--space-5); }
+.ask__empty { display: grid; gap: var(--space-2); }
+.ask__empty-title { font-size: var(--text-xl); overflow-wrap: anywhere; }
+.suggestions { display: grid; gap: var(--space-2); margin-top: var(--space-3); }
+.suggestions__list { list-style: none; display: flex; flex-wrap: wrap; gap: var(--space-2); }
+.suggestion {
+  min-height: 44px;
+  padding: var(--space-2) var(--space-4);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  background: var(--surface);
+  font-size: var(--text-sm);
+  font-weight: 500;
+  text-align: left;
+  transition: border-color var(--motion-150) var(--ease-out), background-color var(--motion-150) var(--ease-out);
+}
+.suggestion:hover { border-color: var(--border-strong); background: var(--surface-2); }
+
+.turns { list-style: none; display: grid; gap: var(--space-6); }
+/* The bottom margin keeps a new answer clear of the sticky composer when it's scrolled to. */
+.turn { display: grid; gap: var(--space-3); scroll-margin: var(--space-6) 0 180px; }
+.turn__question {
+  justify-self: end;
+  max-width: min(80%, 560px);
+  padding: var(--space-3) var(--space-4);
+  border-radius: var(--radius-lg) var(--radius-lg) var(--radius-sm) var(--radius-lg);
+  background: var(--surface-3);
+  font-weight: var(--weight-medium);
+  overflow-wrap: anywhere;
+  animation: fade-in var(--motion-200) var(--ease-out);
+}
+
+.answer {
+  display: grid;
+  gap: var(--space-3);
+  padding: var(--space-4) var(--space-5);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  background: var(--surface);
+  animation: fade-in var(--motion-200) var(--ease-out);
+}
+.answer--pending {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  color: var(--text-2);
+  background: var(--surface-2);
+  border-style: dashed;
+}
+.answer--pending .btn { margin-left: auto; }
+.answer--error { background: var(--danger-bg); border-color: transparent; justify-items: start; }
+.answer__error-title { font-weight: var(--weight-semibold); color: var(--danger-fg); }
+.answer__head { display: flex; flex-wrap: wrap; align-items: center; gap: var(--space-3); }
+.answer__demo { font-size: var(--text-xs); color: var(--text-3); }
+.answer__text { font-size: var(--text-md); line-height: 1.65; max-width: 68ch; overflow-wrap: anywhere; }
+.answer__coverage { font-size: var(--text-sm); color: var(--text-2); }
+
+.composer {
+  position: sticky;
+  bottom: var(--space-3);
+  display: grid;
+  gap: var(--space-2);
+  padding: var(--space-3);
+  margin: 0 calc(var(--space-3) * -1);
+  border-radius: var(--radius-lg);
+  background: var(--surface);
+  box-shadow: 0 -16px 16px -16px var(--shade-2);
+}
+.composer__label { font-weight: var(--weight-semibold); font-size: var(--text-sm); padding-left: 2px; }
+.composer__box {
+  display: flex;
+  align-items: flex-end;
+  gap: var(--space-2);
+  padding: var(--space-2);
+  border: 1px solid var(--border-input);
+  border-radius: var(--radius-lg);
+  background: var(--surface);
+  box-shadow: var(--shadow-1);
+  transition: border-color var(--motion-150) var(--ease-out);
+}
+/* The textarea's own outline is off, so the box carries a full 2px focus ring instead. */
+.composer__box:focus-within { border-color: var(--focus); box-shadow: 0 0 0 1px var(--focus); }
+.composer__box[data-invalid='true'] { border-color: var(--danger-fg); }
+.composer__input {
+  flex: 1;
+  min-width: 0;
+  min-height: 48px;
+  max-height: 200px;
+  padding: var(--space-2) var(--space-3);
+  border: 0;
+  background: transparent;
+  resize: none;
+  field-sizing: content;
+  line-height: 1.5;
+}
+.composer__input:focus { outline: none; }
+.composer__input::placeholder { color: var(--text-3); }
+.composer__send { flex: none; }
+.composer__meta {
+  display: flex;
+  justify-content: space-between;
+  gap: var(--space-3);
+  padding: 0 2px;
+  font-size: var(--text-xs);
+  color: var(--text-3);
+}
+.composer__error { font-size: var(--text-sm); color: var(--danger-fg); font-weight: 600; padding-left: 2px; }
+.spinner--light { border-color: rgb(255 255 255 / 0.3); border-top-color: var(--on-accent); width: 16px; height: 16px; }
+
+/* -------------------------------------------------------------------- quiz */
+
+.quiz { display: grid; gap: var(--space-5); }
+.quiz__progress { display: grid; gap: var(--space-2); }
+.quiz__count { font-size: var(--text-sm); font-weight: var(--weight-semibold); color: var(--text-2); }
+.quiz__question { border: 0; margin: 0; padding: 0; min-width: 0; }
+.quiz__prompt { padding: 0; margin-bottom: var(--space-4); font-size: var(--text-xl); font-weight: var(--weight-semibold); line-height: 1.35; }
+.options { display: grid; gap: var(--space-2); }
+
+.option {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  min-height: 56px;
+  padding: var(--space-3) var(--space-4);
+  border: 1.5px solid var(--border);
+  border-radius: var(--radius-md);
+  background: var(--surface);
+  cursor: pointer;
+  transition: border-color var(--motion-150) var(--ease-out), background-color var(--motion-150) var(--ease-out);
+}
+.option input { position: absolute; opacity: 0; pointer-events: none; }
+.option:hover { border-color: var(--border-strong); }
+.option:has(input:checked:enabled) { border-color: var(--text); background: var(--surface-2); }
+.option:has(input:focus-visible) { outline: 2px solid var(--focus); outline-offset: 2px; }
+.option[data-state='correct'] { border-color: var(--success-fg); background: var(--success-bg); }
+.option[data-state='incorrect'] { border-color: var(--danger-fg); background: var(--danger-bg); }
+.option[data-state='muted'] { opacity: 0.7; }
+.option:has(input:disabled) { cursor: default; }
+.option__letter {
+  display: grid;
+  place-items: center;
+  flex: none;
+  width: 30px;
+  height: 30px;
+  border-radius: var(--radius-sm);
+  background: var(--surface-2);
+  border: 1px solid var(--border);
+  font-size: var(--text-sm);
+  font-weight: var(--weight-semibold);
+  color: var(--text-2);
+}
+.option:has(input:checked:enabled) .option__letter { background: var(--text); color: var(--surface); border-color: var(--text); }
+.option[data-state='correct'] .option__letter { background: var(--success-fg); border-color: var(--success-fg); color: var(--on-status); }
+.option[data-state='incorrect'] .option__letter { background: var(--danger-fg); border-color: var(--danger-fg); color: var(--on-status); }
+.option__text { flex: 1; }
+.option__mark svg { width: 20px; height: 20px; }
+.option[data-state='correct'] .option__mark { color: var(--success-fg); }
+.option[data-state='incorrect'] .option__mark { color: var(--danger-fg); }
+
+.quiz__hint { color: var(--danger-fg); font-weight: 600; font-size: var(--text-sm); }
+.feedback {
+  display: grid;
+  gap: var(--space-2);
+  padding: var(--space-4) var(--space-5);
+  border-radius: var(--radius-lg);
+  background: var(--danger-bg);
+  animation: fade-in var(--motion-200) var(--ease-out);
+}
+.feedback[data-correct='true'] { background: var(--success-bg); }
+.feedback__title { font-weight: var(--weight-semibold); font-size: var(--text-lg); color: var(--danger-fg); }
+.feedback[data-correct='true'] .feedback__title { color: var(--success-fg); }
+.feedback .sources { margin-top: var(--space-1); }
+.quiz__actions { display: flex; justify-content: flex-end; margin-top: var(--space-4); }
+.quiz form { display: grid; gap: var(--space-4); }
+.quiz form .quiz__actions { margin-top: 0; }
+
+.quiz-results { display: grid; gap: var(--space-5); }
+.quiz-results__score { display: grid; gap: var(--space-2); }
+.quiz-results__score h2 { font-size: var(--text-2xl); }
+.quiz-results__actions { display: flex; flex-wrap: wrap; gap: var(--space-2); }
+.review { list-style: none; display: grid; gap: var(--space-2); }
+.review__item {
+  display: flex;
+  gap: var(--space-3);
+  padding: var(--space-3) var(--space-4);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+}
+.review__mark {
+  display: grid;
+  place-items: center;
+  flex: none;
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  background: var(--danger-bg);
+  color: var(--danger-fg);
+}
+.review__item[data-correct='true'] .review__mark { background: var(--success-bg); color: var(--success-fg); }
+.review__mark svg { width: 16px; height: 16px; }
+.review__prompt { font-weight: 600; }
+
+/* ------------------------------------------------------------------ narrow */
+
+@media (max-width: 760px) {
+  .workspace { --overlap: 40px; }
+}
+@media (max-width: 640px) {
+  .workspace__panel { padding: var(--space-1) var(--space-4) var(--space-5); border-radius: var(--radius-lg); }
+  .tabs { margin: 0 calc(var(--space-4) * -1) var(--space-4); padding: 0 var(--space-2); }
+  .tab { padding: 0 var(--space-3); flex: 1; justify-content: center; }
+  .tab svg { display: none; } /* labels alone let four tabs fit across a phone */
+  .answer { padding: var(--space-4); }
+  .turn__question { max-width: 92%; }
+  .quiz__prompt { font-size: var(--text-lg); }
+  .quiz__actions .btn { width: 100%; }
+}

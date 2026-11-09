@@ -1,0 +1,129 @@
+/*
+ * Design tokens. Every colour is a light/dark pair, written once with light-dark(): the
+ * light theme is the vivid blue "Bright" look, the dark theme is the "Dark" look.
+ * The page follows the operating system; <html data-theme="light|dark"> (set by the switch
+ * in the top bar, see lib/theme.ts) overrides it.
+ */
+:root {
+  color-scheme: light dark;
+
+  /* Page and cards: a quiet canvas (60%) with cards one step above it (30%). */
+  --bg: light-dark(#f3f5fa, #0a1020);
+  --surface: light-dark(#ffffff, #121b35);
+  --surface-2: light-dark(#f0f3f9, #18233f);
+  --surface-3: light-dark(#e4e9f2, #212e4f);
+  --border: light-dark(#e0e5ef, rgb(255 255 255 / 0.1));
+  --border-strong: light-dark(#c7d0e0, rgb(255 255 255 / 0.2));
+  --border-input: light-dark(#77839a, #7e8caa); /* >= 3:1 on --surface: form-field edges */
+
+  /* Text: ink with two quieter steps. All are >= 4.5:1 on --bg and every surface. */
+  --text: light-dark(#0e1730, #eef2fb);
+  --text-2: light-dark(#435069, #b4bfd6);
+  --text-3: light-dark(#586680, #93a2c0);
+
+  /* One accent (10%): primary buttons, links, focus and progress. */
+  --accent: light-dark(#2563eb, #3b6be4);
+  --accent-strong: light-dark(#1d4ed8, #8fb1ff); /* accent as text, on --surface */
+  --accent-hover: light-dark(#1d4ed8, #2f5fe0);
+  --accent-soft: light-dark(#e9f0fe, rgb(99 148 255 / 0.16));
+  --on-accent: #ffffff;
+  --focus: light-dark(#2563eb, #8fb1ff);
+
+  /* The stage: the band behind the top bar, the robot and the page title. */
+  --band-bg: light-dark(#2152dc, #0e1731);
+  --band-text: #ffffff;
+  --band-text-2: light-dark(rgb(255 255 255 / 0.92), rgb(255 255 255 / 0.78));
+  --band-line: light-dark(rgb(255 255 255 / 0.3), rgb(255 255 255 / 0.18));
+  --band-chip: light-dark(rgb(255 255 255 / 0.14), rgb(255 255 255 / 0.07));
+  --band-hi: light-dark(#ffe27a, #7fe6ff);
+  --band-disc: light-dark(rgb(255 255 255 / 0.1), rgb(255 255 255 / 0.05));
+  --band-focus: light-dark(#ffffff, #7fe6ff);
+  --dot-demo: #f5b84b;
+  --dot-live: #5edc9a;
+
+  /* Answer origins and states. Each foreground is >= 4.5:1 on its own background. */
+  --doc-fg: light-dark(#1f6b40, #7fe3aa);
+  --doc-bg: light-dark(#e5f4ea, rgb(52 199 120 / 0.14));
+  --general-fg: light-dark(#384e72, #afc0dd);
+  --general-bg: light-dark(#e8edf6, rgb(160 180 215 / 0.12));
+  --mixed-fg: light-dark(#5a46a8, #c3b5ff);
+  --mixed-bg: light-dark(#efecfa, rgb(150 130 255 / 0.16));
+  --insufficient-fg: light-dark(#85520a, #f3c477);
+  --insufficient-bg: light-dark(#fbf0dc, rgb(245 184 75 / 0.14));
+  --danger-fg: light-dark(#a8261d, #ff9a92);
+  --danger-bg: light-dark(#fbeceb, rgb(255 120 110 / 0.14));
+  --success-fg: var(--doc-fg);
+  --success-bg: var(--doc-bg);
+  --on-status: light-dark(#ffffff, #0a1020); /* text on a solid --success-fg or --danger-fg chip */
+
+  /* Tooltips and the backdrop behind dialogs. */
+  --tip-bg: light-dark(#0e1730, #eef2fb);
+  --tip-text: light-dark(#ffffff, #0e1730);
+  --overlay: light-dark(rgb(14 23 48 / 0.45), rgb(2 6 16 / 0.65));
+
+  /* Robot (SVG version; matches the 3D model built by scripts/build-robot-model.mjs). */
+  --robot-shell: #f8f9fb;
+  --robot-line: #c3c8d0;
+  --robot-blue-pale: #cfe2fb;
+  --robot-screen: #22252b;
+  --robot-glow: #7fe6ff;
+  --robot-blush: #f29aaa; /* the tongue; the 3D face uses a matching value in robot3d/face.ts */
+
+  /* Shape and depth: 1px borders first, shadows soft (light alpha < 0.08). */
+  --radius-sm: 8px;
+  --radius-md: 10px;
+  --radius-lg: 16px;
+  --radius-xl: 24px;
+  --shade-1: light-dark(rgb(15 23 42 / 0.05), rgb(0 0 0 / 0.3));
+  --shade-2: light-dark(rgb(15 23 42 / 0.07), rgb(0 0 0 / 0.5));
+  --shadow-1: 0 1px 2px var(--shade-1);
+  --shadow-2: 0 1px 2px var(--shade-1), 0 8px 22px -10px var(--shade-2);
+  --shadow-3: 0 2px 6px var(--shade-1), 0 22px 44px -18px var(--shade-2);
+
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 24px;
+  --space-6: 32px;
+  --space-7: 48px;
+  --space-8: 64px;
+
+  /* One family, three weights. Meta / secondary / body, then a scale for headings. */
+  --font-sans: 'Plus Jakarta Sans Variable', 'Plus Jakarta Sans', ui-sans-serif, system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --font-mono: ui-monospace, 'SFMono-Regular', 'JetBrains Mono', Menlo, Consolas, monospace;
+  --weight-regular: 400;
+  --weight-medium: 500; /* labels, buttons, emphasis */
+  --weight-semibold: 600; /* headings and titles; nothing heavier */
+  --text-xs: 0.75rem; /* 12: meta only (badges, helper text, captions) */
+  --text-sm: 0.875rem; /* 14: secondary */
+  --text-md: 1rem; /* 16: body */
+  --text-lg: 1.125rem; /* 18 */
+  --text-xl: 1.375rem; /* 22 */
+  --text-2xl: 1.75rem; /* 28 */
+  --text-3xl: clamp(1.75rem, 1.3rem + 1.4vw, 2.25rem); /* 28-36 */
+  --text-4xl: clamp(2rem, 1.2rem + 2.2vw, 2.9rem); /* 32-46: the welcome headline */
+  --leading-tight: 1.2;
+  --leading-body: 1.6;
+
+  /* Motion tokens (chrome only; the robot has its own character timing). */
+  --motion-100: 100ms;
+  --motion-150: 150ms;
+  --motion-200: 200ms;
+  --motion-300: 300ms;
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-in: cubic-bezier(0.7, 0, 0.84, 0);
+
+  /* Layout: each screen sets --content-width; the top bar and the page line up with it. */
+  --content-width: 1120px;
+  --reading-width: 960px;
+  --gutter: 24px;
+  --topbar-h: 72px;
+  --overlap: 56px; /* how far the card rises over the stage */
+}
+:root[data-theme='light'] { color-scheme: light; }
+:root[data-theme='dark'] { color-scheme: dark; }
+
+@media (max-width: 640px) {
+  :root { --gutter: 16px; --topbar-h: 60px; --overlap: 40px; }
+}

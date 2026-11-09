@@ -1,0 +1,7 @@
+Machine Learning Based Intrusion Detection System
+
+This project builds an intrusion detection system that classifies network traffic as normal or malicious. It replaces fixed signature rules with a trained model, so it can flag attacks that no existing rule describes.
+
+The system captures packets, groups them into flows, and extracts features such as flow duration, packet counts, and byte rates. A random forest classifier was trained on the CICIDS2017 dataset and reached 97 percent accuracy on held-out traffic.
+
+When the model flags a flow, the system writes an alert to a log file with the source address, the destination address, and the predicted attack type. Administrators review these alerts on a simple dashboard. The current version detects denial of service attacks, port scans, and brute force login attempts.

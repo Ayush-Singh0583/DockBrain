@@ -1,0 +1,207 @@
+/* ------------------------------------------------------------ mascot frame */
+
+.robot {
+  position: relative;
+  width: var(--robot-width, 240px);
+  aspect-ratio: 6 / 7;
+  flex: none;
+  pointer-events: none;
+}
+.robot[data-crop='bust'] { aspect-ratio: 6 / 5; }
+
+.robot--xl { --robot-width: clamp(190px, 31vh, 330px); }
+.robot--lg { --robot-width: clamp(170px, 24vw, 300px); }
+.robot--md { --robot-width: clamp(140px, 18vw, 230px); }
+.robot--sm { --robot-width: clamp(140px, 14vw, 210px); }
+
+/* Everything that moves when the robot is picked up; its place in the layout stays put. */
+.robot__body { position: absolute; inset: 0; }
+.robot[data-placed='true'] .robot__body { z-index: 15; } /* over page content, under menus (20) */
+.robot[data-held='true'] .robot__body { z-index: 30; }
+
+.robot__layer {
+  position: absolute;
+  inset: 0;
+  transition: opacity var(--motion-300) var(--ease-out);
+}
+.robot__layer > svg,
+.robot__layer > canvas { display: block; width: 100%; height: 100%; }
+.robot__layer[data-visible='false'] { opacity: 0; }
+
+/* While the 3D robot loads: a ring that fills up, with the percentage. It waits 150 ms
+   before appearing, so a robot that loads at once never flashes it. */
+.robot__loader {
+  display: grid;
+  place-content: center;
+  justify-items: center;
+  gap: var(--space-2);
+  color: var(--text-2);
+  font-size: var(--text-sm);
+  font-weight: 600;
+  font-variant-numeric: tabular-nums;
+  /* backwards, not both: holding the end state would keep it visible after loading. */
+  animation: robot-loader-in 200ms 150ms var(--ease-out) backwards;
+}
+.robot__ring {
+  width: clamp(40px, 30%, 72px);
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: conic-gradient(var(--accent) calc(var(--progress, 0) * 1turn), var(--border) 0);
+  -webkit-mask: radial-gradient(farthest-side, transparent calc(100% - 6px), #000 calc(100% - 5px));
+  mask: radial-gradient(farthest-side, transparent calc(100% - 6px), #000 calc(100% - 5px));
+}
+@keyframes robot-loader-in { from { opacity: 0; } to { opacity: 1; } }
+
+/* A short line from the robot, above its head (below it near the top of the screen). */
+.robot__quip {
+  position: absolute;
+  left: 50%;
+  bottom: calc(100% - 4px);
+  z-index: 1;
+  width: max-content;
+  max-width: min(240px, 70vw);
+  margin: 0;
+  padding: var(--space-1) var(--space-3);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  background: var(--surface);
+  box-shadow: var(--shadow-2);
+  color: var(--text);
+  font-size: var(--text-sm);
+  font-weight: 600;
+  text-align: center;
+  pointer-events: none;
+  transform: translateX(-50%);
+  animation: robot-quip-in var(--motion-150) var(--ease-out);
+}
+.robot__quip::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 100%;
+  width: 8px;
+  height: 8px;
+  border-right: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+  background: var(--surface);
+  transform: translate(-50%, -4px) rotate(45deg);
+}
+.robot__quip[data-below='true'] { bottom: auto; top: calc(100% - 4px); }
+.robot__quip[data-below='true']::after { top: auto; bottom: 100%; transform: translate(-50%, 4px) rotate(225deg); }
+@keyframes robot-quip-in {
+  from { opacity: 0; transform: translate(-50%, 4px) scale(0.96); }
+  to { opacity: 1; transform: translateX(-50%); }
+}
+
+/* Only the robot itself can be grabbed; the empty corners of its box let clicks through.
+   The 3D robot is matched by shape in useRobotDrag and sets data-robot-hover. */
+.robot__layer[data-visible='true'] .rbt-figure { pointer-events: visiblePainted; cursor: grab; }
+.rbt-shadow { pointer-events: none; }
+:root[data-robot-hover] body { cursor: grab; }
+:root[data-robot-drag],
+:root[data-robot-drag] * {
+  cursor: grabbing !important;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+/* ------------------------------------------------------------- SVG robot */
+
+.rbt { overflow: visible; }
+.rbt-shell { fill: var(--robot-shell); stroke: var(--robot-line); stroke-width: 1.6; }
+.rbt-pale { fill: var(--robot-blue-pale); }
+.rbt-screen { fill: var(--robot-screen); }
+.rbt-eye,
+.rbt-light { fill: var(--robot-glow); }
+.rbt-stroke { fill: none; stroke: var(--robot-glow); stroke-width: 4; stroke-linecap: round; }
+.rbt-bracket { fill: none; stroke: var(--robot-glow); stroke-width: 2.4; stroke-linecap: round; stroke-linejoin: round; opacity: 0.75; }
+.rbt-seam { fill: none; stroke: var(--robot-line); stroke-width: 1.2; opacity: 0.6; }
+.rbt-shadow { fill: rgb(28 27 25 / 0.08); }
+.rbt-shine { fill: #fff; }
+.rbt-tongue { fill: var(--robot-blush); }
+.rbt-mouth-oh { fill: none; stroke: var(--robot-glow); stroke-width: 3; }
+
+.rbt-arm,
+.rbt-head,
+.rbt-eyes,
+.rbt-figure,
+.rbt-torso {
+  transform-box: view-box;
+  transition: transform var(--motion-300) var(--ease-out);
+}
+.rbt-arm--l { transform-origin: -5px 203px; } /* shoulders */
+.rbt-arm--r { transform-origin: 245px 203px; }
+.rbt-head { transform-origin: 120px 148px; } /* neck */
+.rbt-figure { transform-origin: 120px 393px; }
+.rbt-eyes-open { transform-box: fill-box; transform-origin: center; }
+.rbt-eyes-happy { display: none; }
+.rbt-mouth-grin,
+.rbt-mouth-oh { display: none; }
+
+/* Mouths: a smile by default, a grin when greeting or pleased, an "o" when thinking. */
+.rbt[data-pose='greet'] .rbt-mouth,
+.rbt[data-pose='success'] .rbt-mouth,
+.rbt[data-pose='think'] .rbt-mouth { display: none; }
+.rbt[data-pose='greet'] .rbt-mouth-grin,
+.rbt[data-pose='success'] .rbt-mouth-grin { display: inline; }
+.rbt[data-pose='think'] .rbt-mouth-oh { display: inline; }
+
+/* Poses (viewer's left/right). */
+.rbt[data-pose='greet'] .rbt-arm--r { transform: rotate(-145deg); }
+.rbt[data-pose='greet'] .rbt-head { transform: rotate(5deg); }
+
+.rbt[data-pose='point'][data-facing='right'] .rbt-arm--r,
+.rbt[data-pose='point'][data-facing='front'] .rbt-arm--r { transform: rotate(-80deg); }
+.rbt[data-pose='point'][data-facing='left'] .rbt-arm--l { transform: rotate(80deg); }
+.rbt[data-facing='right'] .rbt-eyes { transform: translateX(6px); }
+.rbt[data-facing='left'] .rbt-eyes { transform: translateX(-6px); }
+.rbt[data-pose='point'][data-facing='right'] .rbt-head { transform: rotate(4deg); }
+.rbt[data-pose='point'][data-facing='left'] .rbt-head { transform: rotate(-4deg); }
+
+.rbt[data-pose='think'] .rbt-arm--r { transform: rotate(118deg); }
+.rbt[data-pose='think'] .rbt-head { transform: rotate(-6deg); }
+.rbt[data-pose='think'] .rbt-eyes { transform: translate(-3px, -4px); }
+
+.rbt[data-pose='success'] .rbt-arm--r { transform: rotate(-150deg); }
+.rbt[data-pose='success'] .rbt-arm--l { transform: rotate(150deg); }
+.rbt[data-pose='success'] .rbt-eyes-open { display: none; }
+.rbt[data-pose='success'] .rbt-eyes-happy { display: inline; }
+
+/* Flying (being carried): arms in the air, happy closed eyes, a big grin. */
+.rbt[data-pose='flying'] .rbt-arm--r { transform: rotate(-150deg); }
+.rbt[data-pose='flying'] .rbt-arm--l { transform: rotate(150deg); }
+.rbt[data-pose='flying'] .rbt-eyes-open { display: none; }
+.rbt[data-pose='flying'] .rbt-eyes-happy { display: inline; }
+.rbt[data-pose='flying'] .rbt-mouth { display: none; }
+.rbt[data-pose='flying'] .rbt-mouth-grin { display: inline; }
+
+/* Character animation: only when motion is allowed (data-animated is false otherwise). */
+.rbt[data-animated='true'] .rbt-torso { animation: rbt-breathe 4s ease-in-out infinite alternate; }
+.rbt[data-animated='true'][data-pose='idle'] .rbt-head { animation: rbt-curious-sway 7s ease-in-out infinite; transform-origin: center bottom; }
+.rbt[data-animated='true'] .rbt-eyes-open { animation: rbt-blink 5.2s infinite; }
+.rbt[data-animated='true'][data-pose='greet'] .rbt-arm--r { animation: rbt-wave 0.6s ease-in-out 4 alternate; }
+.rbt[data-animated='true'][data-pose='think'] .rbt-chest-light { animation: rbt-pulse 1.2s ease-in-out infinite alternate; }
+.rbt[data-animated='true'][data-pose='success'] .rbt-figure { animation: rbt-hop 0.45s ease-out 2 alternate; }
+.rbt[data-animated='true'][data-pose='flying'] .rbt-arm--r { animation: rbt-flail-r 0.2s ease-in-out infinite alternate; }
+.rbt[data-animated='true'][data-pose='flying'] .rbt-arm--l { animation: rbt-flail-l 0.2s ease-in-out -0.1s infinite alternate; }
+.rbt[data-animated='true'][data-pose='flying'] .rbt-figure { animation: rbt-shake 100ms linear infinite alternate; }
+.rbt[data-animated='true'] .rbt-gaze { transition: transform var(--motion-100, 100ms) linear; }
+
+@keyframes rbt-breathe { from { transform: translateY(0); } to { transform: translateY(-1.6px); } }
+@keyframes rbt-curious-sway { 0%, 72%, 100% { rotate: 0deg; } 80%, 90% { rotate: -2deg; } 85%, 95% { rotate: 1deg; } }
+@keyframes rbt-blink { 0%, 94%, 100% { transform: scaleY(1); } 97% { transform: scaleY(0.1); } }
+@keyframes rbt-wave { from { transform: rotate(-130deg); } to { transform: rotate(-162deg); } }
+@keyframes rbt-pulse { from { opacity: 1; } to { opacity: 0.35; } }
+@keyframes rbt-hop { from { transform: translateY(0); } to { transform: translateY(-7px); } }
+@keyframes rbt-flail-r { from { transform: rotate(-125deg); } to { transform: rotate(-168deg); } }
+@keyframes rbt-flail-l { from { transform: rotate(125deg); } to { transform: rotate(168deg); } }
+@keyframes rbt-shake { from { transform: translateX(-1.5px) rotate(-1.5deg); } to { transform: translateX(1.5px) rotate(1.5deg); } }
+
+@media (prefers-reduced-motion: reduce) {
+  .robot__layer,
+  .rbt-arm,
+  .rbt-head,
+  .rbt-eyes,
+  .rbt-figure,
+  .rbt-torso { transition: none; }
+}

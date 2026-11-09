@@ -1,0 +1,174 @@
+/* The stage's card: the folder's facts at the side, the overview in the main panel. */
+.codebase { --overlap: 56px; }
+.codebase__layout {
+  display: grid;
+  grid-template-columns: 260px minmax(0, 1fr);
+  gap: var(--space-5);
+  align-items: start;
+}
+.codebase__side { position: sticky; top: var(--space-5); }
+.codebase__main { display: grid; gap: var(--space-5); min-width: 0; padding: var(--space-5) var(--space-6) var(--space-6); box-shadow: var(--shadow-3); }
+.codebase__content { display: grid; gap: var(--space-5); }
+
+/* ------------------------------------------------------------------- deck */
+
+.deck { display: grid; gap: var(--space-4); }
+
+.deck__tabs {
+  display: flex;
+  gap: var(--space-2);
+  overflow-x: auto;
+  scrollbar-width: none;
+  padding: 2px;
+}
+.deck__tab {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  min-height: 44px;
+  padding: 0 var(--space-3) 0 var(--space-2);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  background: var(--surface);
+  font-size: var(--text-sm);
+  font-weight: 600;
+  color: var(--text-2);
+  white-space: nowrap;
+  transition: border-color var(--motion-150) var(--ease-out), background-color var(--motion-150) var(--ease-out),
+    color var(--motion-150) var(--ease-out);
+}
+.deck__tab:hover { border-color: var(--border-strong); color: var(--text); }
+.deck__tab[aria-selected='true'] { background: var(--accent); border-color: var(--accent); color: var(--on-accent); }
+.deck__tab-number {
+  display: grid;
+  place-items: center;
+  width: 24px;
+  height: 24px;
+  border-radius: 7px;
+  background: var(--surface-2);
+  color: var(--text-2);
+  font-size: var(--text-xs);
+  font-weight: var(--weight-semibold);
+}
+.deck__tab[aria-selected='true'] .deck__tab-number { background: rgb(255 255 255 / 0.22); color: var(--on-accent); }
+
+/* Stacked cards: two offset layers behind the active card, like the sketch. */
+.deck__stack { position: relative; padding: 0 16px 16px 0; touch-action: pan-y; }
+.deck__layer {
+  position: absolute;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-xl);
+  background: var(--surface);
+}
+.deck__layer--1 { inset: 8px 8px 8px 8px; background: var(--surface-2); }
+.deck__layer--2 { inset: 16px 0 0 16px; background: var(--surface-3); }
+
+.deck__card {
+  position: relative;
+  display: grid;
+  gap: var(--space-3);
+  min-height: 360px;
+  align-content: start;
+  padding: var(--space-6);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-xl);
+  background: var(--surface-2);
+  box-shadow: var(--shadow-1);
+  animation: card-in-next var(--motion-300) var(--ease-out);
+}
+.deck__card[data-direction='-1'] { animation-name: card-in-prev; }
+.deck__card--static { animation: none; }
+@keyframes card-in-next { from { opacity: 0; transform: translateX(24px); } to { opacity: 1; transform: none; } }
+@keyframes card-in-prev { from { opacity: 0; transform: translateX(-24px); } to { opacity: 1; transform: none; } }
+
+.deck__question { font-size: var(--text-2xl); letter-spacing: -0.02em; }
+.deck__summary { font-size: var(--text-lg); line-height: 1.55; color: var(--text); max-width: 60ch; }
+.deck__details { display: grid; gap: var(--space-2); padding-left: 1.2em; color: var(--text-2); max-width: 64ch; }
+.deck__details li::marker { color: var(--text-3); }
+.deck__evidence {
+  display: grid;
+  gap: var(--space-2);
+  margin-top: var(--space-2);
+  padding-top: var(--space-4);
+  border-top: 1px solid var(--border);
+}
+.deck__evidence ul { list-style: none; display: grid; gap: var(--space-2); }
+.deck__evidence li { display: grid; gap: 2px; font-size: var(--text-sm); }
+.deck__evidence code {
+  justify-self: start;
+  padding: 1px 6px;
+  border-radius: 6px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  font-size: var(--text-xs);
+  overflow-wrap: anywhere;
+}
+
+.deck__controls {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-3);
+}
+.deck__count { font-size: var(--text-sm); font-weight: 600; color: var(--text-2); font-variant-numeric: tabular-nums; }
+
+/* ------------------------------------------------------------- distinctive */
+
+.distinctive {
+  display: grid;
+  gap: var(--space-3);
+  padding: var(--space-4) var(--space-5);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  background: var(--surface-2);
+}
+.distinctive h2 {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-size: var(--text-md);
+}
+.distinctive h2 svg { width: 18px; height: 18px; color: var(--accent); }
+.distinctive ul { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--space-2) var(--space-5); padding-left: 1.1em; font-size: var(--text-sm); color: var(--text-2); }
+
+/* ------------------------------------------------------------ folder facts */
+
+.facts {
+  display: grid;
+  gap: var(--space-3);
+  padding: var(--space-4);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  background: var(--surface);
+}
+.facts__title { font-size: var(--text-md); }
+.facts__note { font-size: var(--text-xs); color: var(--text-3); margin-top: calc(var(--space-2) * -1); }
+.facts__note:last-child { margin-top: 0; }
+.facts__list { display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-3); margin: 0; }
+.facts__list dt { font-size: var(--text-xs); color: var(--text-3); }
+.facts__list dd { margin: 0; font-weight: var(--weight-semibold); font-size: var(--text-lg); font-variant-numeric: tabular-nums; }
+
+/* ------------------------------------------------------------------ narrow */
+
+@media (max-width: 900px) {
+  /* The overview first, then the folder's facts. */
+  .codebase__layout { grid-template-columns: 1fr; gap: var(--space-4); }
+  .codebase__main { order: 1; padding: var(--space-4) var(--space-4) var(--space-5); }
+  .codebase__side { order: 2; position: static; }
+}
+@media (max-width: 760px) {
+  .codebase { --overlap: 40px; }
+}
+
+@media (max-width: 640px) {
+  .deck__card { padding: var(--space-5) var(--space-4); min-height: 0; border-radius: var(--radius-lg); }
+  .deck__layer { border-radius: var(--radius-lg); }
+  .deck__stack { padding: 0 10px 10px 0; }
+  .deck__layer--1 { inset: 5px 5px 5px 5px; }
+  .deck__layer--2 { inset: 10px 0 0 10px; }
+  .deck__question { font-size: var(--text-xl); }
+  .deck__summary { font-size: var(--text-md); }
+  .distinctive ul { grid-template-columns: 1fr; }
+  .deck__tabs { display: grid; grid-template-columns: 1fr 1fr; overflow: visible; }
+  .deck__tab { white-space: normal; text-align: left; line-height: 1.25; padding-block: var(--space-1); }
+}
