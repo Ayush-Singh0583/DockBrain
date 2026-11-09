@@ -334,7 +334,6 @@ More detail:
 
 - [`FRONTEND/README.md`](FRONTEND/README.md): the web app, the robot and its URL switches
 - [`FRONTEND/API_CONTRACT.md`](FRONTEND/API_CONTRACT.md): the HTTP API
-- [`CLAUDE.md`](CLAUDE.md): architecture and change history
 
 </details>
 
